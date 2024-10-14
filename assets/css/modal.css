@@ -1,0 +1,153 @@
+.modal {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: theme(width.dvw);
+  height: theme(height.dvh);
+
+  @media screen(md) {
+    align-items: center;
+  }
+}
+
+.modal__backdrop {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.modal__inner {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  z-index: 50;
+
+  width: 100%;
+  max-width: 720px;
+  max-height: theme(height.dvh);
+
+  background: theme(colors.clan-secondary.300);
+  border: 1px solid theme(colors.clan-primary.950);
+  border-top-left-radius: theme(borderRadius.2xl);
+  border-top-right-radius: theme(borderRadius.2xl);
+
+  @media screen(md) {
+    border-radius: theme(borderRadius.2xl);
+  }
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  background: theme(colors.clan-secondary.200);
+  border-top-left-radius: theme(borderRadius.2xl);
+  border-top-right-radius: theme(borderRadius.2xl);
+  border-bottom: 1px solid theme(colors.clan-secondary.400);
+}
+
+.modal__header__title {
+  display: flex;
+  justify-items: center;
+  padding: 0 theme(padding.8);
+  height: 100%;
+
+  & span {
+    padding-top: theme(padding[1]);
+    text-transform: uppercase;
+    color: theme(colors.clan-secondary.700);
+  }
+}
+
+.modal__stripe {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: theme(padding.2) 0;
+  height: theme(width.9);
+
+  & hr {
+    border-color: theme(colors.clan-primary.300);
+  }
+}
+
+.modal__header__action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: theme(width.9);
+  height: theme(width.9);
+  cursor: pointer;
+
+  & svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.modal__body {
+  position: relative;
+  flex: 1;
+  display: flex;
+  padding: theme(padding.4);
+  overflow: scroll;
+}
+
+.modal__body__wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: theme(padding.4) 0;
+  margin: 0 auto;
+  padding: theme(padding.8) theme(padding.4);
+  width: 100%;
+
+  background: white;
+  border-radius: theme(borderRadius.lg);
+
+  overflow: hidden;
+
+  @media screen(lg) {
+    padding: theme(padding.12) theme(padding.16);
+  }
+}
+
+.modal__body__inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: theme(padding.4) 0;
+}
+
+.modal__footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: theme(padding.8);
+  margin-bottom: theme(padding.6);
+  border-top: 1px solid theme(colors.clan-secondary.300);
+
+  @media screen(lg) {
+    flex-direction: row;
+  }
+
+  & h3 {
+    flex: 1;
+    padding-top: theme(padding.8);
+    font-size: 1.56rem;
+    cursor: pointer;
+  }
+}

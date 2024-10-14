@@ -1,0 +1,2 @@
+css: npx tailwindcss -i assets/css/main-input.css -o assets/css/main.css --watch
+hugo: hugo server --buildDrafts

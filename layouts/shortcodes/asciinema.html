@@ -1,0 +1,4 @@
+<div id="{{ with .Get "key" }}{{ . }}{{ end }}"></div>
+<script>
+    AsciinemaPlayer.create('{{ .Site.BaseURL }}/videos/{{ with .Get "key" }}{{ . }}{{ end }}.cast', document.getElementById('{{ with .Get "key" }}{{ . }}{{ end }}'), {autoplay:true, loop:true});
+</script>

@@ -1,0 +1,105 @@
+.terminal {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
+  background: theme(colors.clan-tertiary.100);
+  border: 1px solid theme(colors.clan-tertiary.200);
+  border-radius: theme(borderRadius.lg);
+
+  @media screen(md) {
+    border-radius: theme(borderRadius.xl);
+  }
+}
+
+.terminal__tool {
+  padding: theme(padding.1) theme(padding[3]);
+}
+
+.terminal__tool__dot {
+  width: theme(width[3.5]);
+  height: theme(height[3.5]);
+  border-radius: 100%;
+  background: theme(colors.clan-tertiary.300);
+
+  @med;
+}
+
+.terminal__body {
+  display: flex;
+  flex-direction: column;
+  gap: theme(padding.2) theme(padding.2);
+  padding: theme(padding.8) theme(padding.4);
+  background: theme(colors.clan-primary.900);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.08) 25%,
+    rgba(255, 255, 255, 0.08) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(0, 0, 0, 0.08) 50%,
+    rgba(0, 0, 0, 0.08) 75%,
+    rgba(255, 255, 255, 0.08) 75%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  background-size: 4px 4px;
+  border: 1px solid theme(colors.clan-primary.950);
+  border-bottom-left-radius: theme(borderRadius.xl);
+  border-bottom-right-radius: theme(borderRadius.xl);
+
+  @media screen(md) {
+    gap: theme(padding.4) theme(padding.2);
+    padding: theme(padding.8);
+
+    border-bottom-left-radius: theme(borderRadius.xl);
+    border-bottom-right-radius: theme(borderRadius.xl);
+  }
+}
+
+.terminal__row {
+  display: flex;
+  gap: 0 theme(padding.2);
+  color: theme(colors.white);
+  font-size: 0.85rem;
+
+  @media screen(md) {
+    font-size: 1rem;
+  }
+}
+
+.terminal__column {
+  min-width: theme(width.12);
+  @media screen(md) {
+    min-width: theme(width.16);
+  }
+}
+
+.terminal__info {
+  color: theme(colors.clan-info.400);
+}
+
+.terminal__success {
+  color: theme(colors.clan-success.400);
+}
+
+.terminal__caret {
+  flex: 1;
+  content: ".";
+  max-width: theme(width[1.5]);
+  height: 1.125rem;
+  color: white;
+  background: theme(colors.white);
+  animation: blink-caret 1.25s infinite;
+
+  @media screen(md) {
+    height: 1.48rem;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgb(255, 255, 255);
+  }
+}

@@ -1,0 +1,5 @@
+{{ with .Param "tags" }}
+  {{ range $tag := . }}
+    {{ partial "pill" (dict "title" $tag "class" "") }}
+  {{ end }}
+{{ end }}

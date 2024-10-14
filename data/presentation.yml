@@ -1,0 +1,43 @@
+points:
+  - description: >
+      In the early days of the internet and personal computing, users had full control over their digital experiences, fostering innovation and collaboration in an open, decentralized environment.
+    index: 1
+    contentClass: justify-start
+    imageClass: items-center
+    metaFontColor: "#fff"
+    classes: right
+    fontColor: "#ffffff"
+    position: center
+    maxWidth: 640
+    color: "#223536"
+    alignment: left
+    image: images/mac.png
+    background: hello
+  - description: >
+      Over the past two decades, a concerning shift occurred: computers and smartphones evolved into increasingly closed systems, while a handful of tech companies carved up the once-open internet.
+    index: 2
+    contentClass: justify-end
+    imageClass: items-center
+    metaFontColor: "#fff"
+    classes: left
+    fontColor: "#ffffff"
+    position: center
+    maxWidth: 640
+    color: "#397396"
+    alignment: right
+    image: images/globe.png
+    background: none
+  - description: >
+      Users traded control and ownership for seamless experiences and access to powerful, free applications. Opting out is possible, but convenience is highly persuasive.
+    index: 3
+    contentClass: justify-start
+    imageClass: slide__img__item--right
+    metaFontColor: "#162324"
+    classes: right
+    fontColor: "#162324"
+    position: end
+    maxWidth: 700
+    color: "#95ABAE"
+    alignment: left
+    image: images/phone.png
+    background: none

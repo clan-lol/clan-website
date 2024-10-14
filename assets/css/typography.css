@@ -1,0 +1,295 @@
+@font-face {
+  font-family: Fragment Mono;
+  src: url("/fragment/FragmentMono-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url("/archivo/Archivo-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url("/archivo/Archivo-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url("/archivo/Archivo-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo SemiCondensed;
+  src: url("/archivo/ArchivoSemiCondensed-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo SemiCondensed;
+  src: url("/archivo/ArchivoSemiCondensed-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo SemiCondensed;
+  src: url("/archivo/ArchivoSemiCondensed-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  /* render for text quality */
+  font-family: Archivo SemiCondensed;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: 1rem;
+  font-feature-settings:
+    "dlig" on,
+    "salt" on,
+    "ss01" on,
+    "ss02" on,
+    "ss03" on;
+}
+
+h3,
+.h3 {
+  font-family:
+    Archivo SemiCondensed,
+    sans-serif;
+  font-weight: 600;
+  font-size: 1.625rem;
+  line-height: 120%;
+  letter-spacing: -0.03rem;
+
+  @media screen(md) {
+    font-size: 2rem;
+    line-height: 110%;
+  }
+
+  @media screen(2xl) {
+    font-size: clamp(2.24rem, 3.5vw, 2.5rem);
+  }
+}
+
+h4,
+.h4 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 116%;
+  letter-spacing: -0.0225rem;
+
+  @media screen(md) {
+    font-size: 1.625rem;
+    line-height: 144%;
+    letter-spacing: -0.02rem;
+  }
+
+  @media screen(2xl) {
+    font-size: clamp(1.875rem, 4vw, 2rem);
+  }
+}
+
+h1,
+.h1 {
+  font-family:
+    Archivo SemiCondensed,
+    sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 116%;
+  letter-spacing: -0.113rem;
+
+  @media screen(sm) {
+    font-size: 2.25rem;
+    line-height: 110%;
+    letter-spacing: -0.1rem;
+  }
+
+  @media screen(md) {
+    font-size: 2.875rem;
+    line-height: 110%;
+    letter-spacing: -0.1rem;
+  }
+
+  @media screen(lg) {
+    font-size: 3.875rem;
+    line-height: 110%;
+    letter-spacing: -0.1rem;
+  }
+
+  @media screen(2xl) {
+    font-size: clamp(3rem, 4.5vw, 5rem);
+  }
+}
+
+h2,
+.h2 {
+  font-family:
+    Archivo SemiCondensed,
+    sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 120%;
+  letter-spacing: -0.03rem;
+
+  @media screen(md) {
+    font-size: 3rem;
+    line-height: 116%;
+  }
+
+  @media screen(2xl) {
+    font-size: clamp(3rem, 3.5vw, 4.4rem);
+  }
+}
+
+.article__content p {
+  font-weight: 500;
+  line-height: 148%;
+  letter-spacing: 0.02rem;
+}
+
+p,
+.p,
+.article__content p,
+.article__content li {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 142%;
+  letter-spacing: 0;
+
+  @media screen(md) {
+    font-size: 1.375rem;
+  }
+
+  @media screen(2xl) {
+    font-size: clamp(1.56rem, 2.5vw, 1.75rem);
+  }
+}
+
+.body {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 142%;
+  letter-spacing: 0;
+
+  @media screen(md) {
+    font-size: 1.125rem;
+  }
+
+  @media screen(2xl) {
+    font-size: clamp(1.16rem, 4vw, 1.375rem);
+  }
+}
+
+.text-teaser {
+  font-family:
+    Archivo SemiCondensed,
+    sans-serif;
+  font-weight: 600;
+  font-size: 2.875rem;
+  line-height: 116%;
+
+  @media screen(md) {
+    font-size: 3.75rem;
+    line-height: 110%;
+  }
+
+  @media screen(lg) {
+    font-size: 4rem;
+    line-height: 110%;
+  }
+
+  @media screen(2xl) {
+    font-size: clamp(4.5rem, 4vw, 5.5rem);
+  }
+}
+
+.p-teaser {
+  font-weight: 500;
+  font-family: "Archivo";
+  opacity: 0.88;
+
+  @media screen(md) {
+    font-size: 1rem;
+    line-height: 110%;
+  }
+}
+
+.font-uppercase {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.2rem;
+
+  @media screen(md) {
+    font-size: 1rem;
+  }
+}
+
+.font-button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04rem;
+
+  @media screen(md) {
+    font-size: 1.125rem;
+  }
+}
+
+.font-small {
+  font-size: 0.75rem;
+  line-height: 148%;
+  letter-spacing: 0.06rem;
+
+  @media screen(md) {
+    font-size: 0.875rem;
+    letter-spacing: 0.06rem;
+  }
+}
+
+.mono,
+code {
+  font-family: Fragment Mono !important;
+  font-weight: 400;
+  letter-spacing: initial !important;
+  font-feature-settings:
+    "dnom" on,
+    "numr" on,
+    "dlig" on,
+    "salt" on,
+    "ss02" on,
+    "ss03" on,
+    "ss04" on,
+    "ss12" on !important;
+}
+
+/* this gets applied for ligatures to ensuring to maintain them. A letterspacing applied will break them */
+.ligature {
+  letter-spacing: 0;
+}
+
+.text--primary {
+  color: theme(colors.clan-primary.950);
+}
+
+.text--secondary {
+  color: theme(colors.clan-primary.800);
+}
+
+.text--tertiary {
+  color: theme(colors.clan-primary.600);
+}

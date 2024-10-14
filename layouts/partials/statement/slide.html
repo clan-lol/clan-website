@@ -1,0 +1,33 @@
+<div
+  style="z-index: {{ .index }}"
+  class="js-statement flex items-center"
+  data-rotation="{{ .rotate }} bg-white"
+>
+  <div
+    class="relative flex items-end w-full max-w-96 h-96 lg:h-[23rem] 2xl:h-[30rem] rounded-xl overflow-hidden"
+  >
+    <div class="absolute z-40 flex items-center p-8">
+      <header class="js-statement-headline">
+        <h3 class="">
+          <span>
+            {{ .title }}
+          </span>
+        </h3>
+      </header>
+    </div>
+    <div
+      style="background: {{ .background }}"
+      class="relative w-full h-full pt-6"
+    >
+      {{ $image := resources.Get .img }}
+      {{ $img := $image.Resize "x1000 webp" }}
+      <img
+        src="{{ $img.RelPermalink }}"
+        width="{{ $img.Width }}"
+        height="{{ $img.Height }}"
+        class="z-20 w-full h-full object-top object-contain lg:object-contain object-center-bottom mix-blend-screen"
+        alt=""
+      />
+    </div>
+  </div>
+</div>

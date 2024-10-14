@@ -1,0 +1,49 @@
+<section
+  class="teaser relative pt-8 pb-16 md:pb-24 overflow-hidden {{ .class }}"
+>
+  <div class="relative z-20 container">
+    <div class="flex justify-center">
+      <header class="flex flex-col gap-3 text-center">
+        <div class="article__header-image">
+          {{ $teaserImage := resources.GetMatch "images/clan-client-folder-3.svg" }}
+          {{ with $teaserImage }}
+            <figure class="relative w-40 h-40 mx-auto">
+              <div class="teaser__marker absolute z-30">
+                {{ partial "icons/icon-download" (dict "width" 16 "height" 16) }}
+              </div>
+              <img class="" src="{{ $teaserImage.RelPermalink }}" />
+            </figure>
+          {{ end }}
+        </div>
+        <h2 class="h1 w-full max-w-2xl 2xl:max-w-[50rem]">
+          {{ site.Data.teaser.headline }}
+        </h2>
+        <p
+          class="teaser__description p-teaser w-full max-w-2xl 2xl:max-w-[38rem]"
+        >
+          {{ site.Data.teaser.subline }}
+        </p>
+        <div class="pt-10 flex justify-center">
+          {{ if .inverted }}
+            {{ partial "button" (dict "title" "Getting Started" "class" "") }}
+          {{ else }}
+            {{ partial "button" (dict "title" "Getting Started" "class" "button--inverted") }}
+          {{ end }}
+        </div>
+      </header>
+    </div>
+  </div>
+  {{ if eq .backgroundImage true }}
+    {{ $teaserImage := resources.GetMatch "images/clan-key-visual.png" }}
+    {{ with $teaserImage }}
+      <figure class="absolute z-10 top-0 left-0 mx-auto">
+        <img
+          class="mix-blend-overlay opacity-5"
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+          src="{{ $teaserImage.RelPermalink }}"
+        />
+      </figure>
+    {{ end }}
+  {{ end }}
+</section>

@@ -1,0 +1,15 @@
+.pill {
+  display: inline-flex;
+  padding: theme(padding[1]) theme(padding.2);
+  background: white;
+  border-radius: theme(borderRadius.3xl);
+  color: theme(colors.clan-primary.950);
+
+  @media screen(md) {
+    padding: theme(padding.[1.5]) theme(padding.4);
+  }
+}
+
+.pill--highlight {
+  background: theme(colors.clan-success.400);
+}

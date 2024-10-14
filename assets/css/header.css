@@ -1,0 +1,64 @@
+.main-header {
+  position: relative;
+  z-index: 40;
+}
+
+.main-header #logo {
+  fill: theme(colors.clan-primary.950);
+}
+
+.main-header .button__title {
+  padding-left: theme(padding[3.5]) !important;
+  padding-right: theme(padding[3.5]) !important;
+}
+
+.main-header__nav {
+  diplay: flex;
+  align-items: center;
+  gap: 0 theme(padding.4);
+  padding: 0 theme(padding.8) 0 0;
+}
+
+.main-header__nav a {
+  position: relative;
+  font-size: theme(fontSize.base);
+  font-weight: 600;
+  color: theme(colors.clan-primary.950);
+}
+
+.main-header--inverted #logo {
+  fill: white;
+}
+
+.main-header--inverted .main-header__nav a {
+  color: theme(colors.white);
+  fill: theme(colors.white);
+}
+
+.main-header__nav--active:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  width: 8px;
+  height: 8px;
+  background: theme(colors.clan-success.400);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.res-menu--hidden {
+  @media screen(md) {
+    display: none;
+  }
+}
+
+.res-menu__nav {
+  position: absolute;
+  bottom: 4rem;
+  right: 0;
+}
+
+.res-menu__nav--hidden {
+  display: none;
+}

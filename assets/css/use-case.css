@@ -1,0 +1,77 @@
+.use-case {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80rem;
+}
+
+.use-case__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 560px;
+  overflow: hidden;
+  border-radius: theme(borderRadius.2xl);
+
+  @media screen(md) {
+    border-radius: theme(borderRadius.3xl);
+  }
+}
+
+.use-case__column {
+  flex: 1;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: theme(padding.8) theme(padding.4);
+  width: 100%;
+  height: fit-content;
+
+  @media screen(lg) {
+    max-width: 25rem;
+    height: 100%;
+    padding-left: theme(padding.8);
+    padding-right: theme(padding.8);
+  }
+}
+
+.use-case__column__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: theme(padding.10) 0;
+
+  position: relative;
+  z-index: 20;
+
+  height: fit-content;
+
+  @media screen(md) {
+    justify-content: center;
+  }
+
+  @media screen(lg) {
+    height: 100%;
+  }
+}
+
+.use-case__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: theme(colors.clan-primary.950);
+  opacity: theme(opacity.60);
+  backdrop-filter: blur(10px);
+}
+
+.use-case__header {
+  display: flex;
+  flex-direction: column;
+  gap: theme(padding.1) 0;
+
+  @media screen(md) {
+    gap: theme(padding.3) 0;
+  }
+}

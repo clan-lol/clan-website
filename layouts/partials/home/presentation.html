@@ -1,0 +1,13 @@
+<div class="py-16 md:py-24">
+  <div
+    style="font-size: 16vw;"
+    class="sticky top-0 z-10 px-6 text-billboard text-center text-clan-secondary-200 opacity-40"
+  >
+    {{ partial "why-clan-slogan" . }}
+  </div>
+  <div class="presentation">
+    {{ range .Site.Data.presentation.points }}
+      {{ partial "home/slide" . }}
+    {{ end }}
+  </div>
+</div>

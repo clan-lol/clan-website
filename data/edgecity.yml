@@ -1,0 +1,21 @@
+heroHeadlineI: Hey Edge City
+heroHeadlineII: Welcome to Your Private Internet
+heroSubline: >
+  This is your Clan. A space that belongs to the community. A home that you can build together. Connect, share, collaborate.
+usp:
+  headline: Peer-to-Peer is hard!
+  description: >
+    But it doesn't have to be.<br/>Walled gardens and network complexity make P2P systems difficult to build and intimidating to use. Clan’s goal is to make systems simple and legible: a community garden where anyone can plant seeds.
+  list:
+    - title: Full functionality,<br/>fully open source
+      description: Your Clan hosts open source apps for encrypted chat, cloud-free file sharing, and a full office suite. Add docs to a shared folder to collaborate!
+    - title: An internet full of<br/>people you know IRL.
+      description: Connected computers talk to each other directly, over a peer-to-peer mesh VPN - a private network that only Edge City residents can access.
+    - title: Automated, peer-to-peer<br/>updates and backups
+      description: Choose your source of truth and update your machine with a simple command. Restore any time from encrypted backups stored by peers.
+    - title: Human-readable<br/>configuration
+      description: Pre-loaded configuration files provide an easy-to-navigate layer over complex settings that you’re free to explore and modify.
+    - title: Built by the community,<br/>for the community.
+      description: Build collaboratively in a shared local repo. Community-built P2P apps can be packaged to run over the Edge Clan network.
+    - title: Automated<br/>secret management
+      description: Sensitive data like passwords and keys are securely stored and shared

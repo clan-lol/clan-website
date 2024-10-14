@@ -1,0 +1,41 @@
+.hero {
+  position: relative;
+}
+
+.hero__stage {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin-top: calc(-1 * theme(padding.24));
+  width: 100%;
+  height: 100%;
+  background: theme(colors.clan-primary.900);
+  overflow: hidden;
+
+  @media screen(sm) {
+    margin-top: calc(-1 * theme(padding.16));
+  }
+
+  @media screen(md) {
+    margin-top: calc(-1 * theme(padding.24));
+  }
+}
+
+.hero__content {
+  @media screen(2xl) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75vh;
+  }
+
+  & p {
+    max-width: 40rem;
+    color: theme(colors.clan-primary.50);
+  }
+}
+
+.hero__stage .grain {
+  position: absolute;
+}

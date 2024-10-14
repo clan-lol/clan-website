@@ -1,0 +1,32 @@
+{{ $authors := .authors }}
+{{ $articleAuthor := .author }}
+{{ $teaser := .teaser }}
+{{ range .authors }}
+  {{ if eq .name $articleAuthor }}
+    <div class="flex items-center gap-x-4">
+      {{ if eq $teaser false }}
+
+        {{ $url := .avatar }}
+        <img
+          class="w-10 h-10 lg:w-12 lg:h-12 rounded-full"
+          width="48"
+          height="48"
+          src="{{ $url }}"
+        />
+
+        <div class="flex flex-col">
+          <strong class="mono font-small text--secondary">{{ .name }}</strong>
+          <span class="mono font-small text--tertiary">{{ .description }}</span>
+        </div>
+      {{ else }}
+        {{ $url := .avatar }}
+        <img
+          class="w-8 h-8 rounded-full"
+          width="48"
+          height="48"
+          src="{{ $url }}"
+        />
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}

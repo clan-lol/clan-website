@@ -1,0 +1,39 @@
+.blog {
+  position: relative;
+  z-index: 1;
+  padding: theme(padding.8) 0 theme(padding.16);
+
+  @media screen(sm) {
+    padding: theme(padding.16) 0 theme(padding.24);
+  }
+}
+
+.blog__stage-frame {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin-top: calc(-1 * theme(padding.24));
+  width: 100%;
+  height: calc(1.25 * theme(height.96));
+  background: theme(colors.clan-primary.900);
+  overflow: hidden;
+
+  @media screen(sm) {
+    margin-top: calc(-1 * theme(padding.16));
+    height: theme(height.96);
+  }
+
+  @media screen(md) {
+    margin-top: calc(-1 * theme(padding.24));
+  }
+}
+
+.blog__stage-frame .grain {
+  position: absolute;
+}
+
+.blog__body {
+  position: relative;
+  z-index: 20;
+}

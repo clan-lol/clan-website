@@ -1,0 +1,36 @@
+.teaser__description {
+  margin: 0 auto;
+  width: 100%;
+  max-width: calc(1.5 * theme(width.80));
+
+  @media screen(2xl) {
+    max-width: calc(2.5 * theme(width.80));
+  }
+}
+
+.teaser__header {
+  width: 100%;
+  max-width: 72rem;
+}
+
+.teaser__marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: theme(padding.12);
+  bottom: theme(padding.14);
+  width: theme(width.6);
+  height: theme(height.6);
+  background: theme(colors.clan-success.500);
+  border-radius: 100%;
+}
+
+.teaser--inverted {
+  background: theme(colors.clan-primary.950);
+
+  h1,
+  h2,
+  p {
+    color: theme(colors.white) !important;
+  }
+}

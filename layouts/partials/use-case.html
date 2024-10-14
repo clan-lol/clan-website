@@ -1,0 +1,24 @@
+<div class="container">
+  <article class="use-case">
+    <a href="" class="use-case__inner">
+      <div class="use-case__column">
+        <div class="use-case__column__inner">
+          <div class="">
+            {{ partial "pill" (dict "title" "Use Case" "class" "pill--highlight") }}
+          </div>
+          {{ partial "use-case/header" . }}
+        </div>
+        <div class="use-case__backdrop"></div>
+      </div>
+      <div style="height: inherit;" class="flex-1">
+        {{ $image := resources.Get site.Data.usecase.image }}
+        {{ $img := $image.Resize "x1000 webp" }}
+        <img
+          src="{{ $img.RelPermalink }}"
+          class="w-full h-full object-cover"
+          alt="Use Case"
+        />
+      </div>
+    </a>
+  </article>
+</div>

@@ -1,0 +1,36 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: theme(padding.4);
+  padding: theme(padding.8) theme(padding.6) theme(padding.4);
+  background: theme(colors.white);
+  border-radius: theme(borderRadius.lg);
+  cursor: pointer;
+
+  width: 100%;
+  min-width: theme(width.72);
+
+  @media screen(md) {
+    min-width: initial;
+  }
+}
+
+.tile__inner {
+  display: flex;
+  flex-direction: column;
+  gap: theme(padding.4);
+}
+
+.tile__headline {
+  line-height: 124%;
+}
+
+.tile__body {
+  flex: 1;
+}
+
+.tile__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: theme(padding.4);
+}

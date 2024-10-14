@@ -1,0 +1,27 @@
+<article class="col-span-1 article-overview w-full max-w-xl">
+  <div class="article-overview__noise"></div>
+  <a
+    class="article-overview__content flex flex-col gap-6"
+    href="{{ .Permalink }}"
+  >
+    <div>
+      {{ partial "blog/tags" . }}
+    </div>
+    <header class="flex flex-col gap-3 md:gap-6">
+      <h3 class="text--primary">{{ .Title }}</h3>
+      <span class="body text--secondary hidden lg:block">
+        {{ .Params.subline }}
+      </span>
+    </header>
+    <div>
+      <div class="flex items-center gap-x-4">
+        {{ partial "author" (dict "author" .Params.author "authors" .Site.Data.authors.authors "teaser" true) }}
+        <span class="mono text--tertiary font-small"
+          >{{ .Params.Date.Format "2 Jan 2006" }} ·
+          {{ .ReadingTime }}
+          min</span
+        >
+      </div>
+    </div>
+  </a>
+</article>

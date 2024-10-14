@@ -1,0 +1,59 @@
+{{ define "main" }}
+  <div class="container">
+    <article class="article">
+      <header class="article__header">
+        <div class="flex items-center gap-x-6">
+          <a class="text--tertiary mono font-small" href="/blog">Blog</a>
+          <div class="flex gap-x-3">
+            {{ partial "pill" (dict "title" "Newest" "class" "pill--highlight") }}
+            {{ partial "blog/tags" . }}
+          </div>
+        </div>
+
+        <h1 class="js-find-ligatures mt-8 lg:mt-0">{{ .Title }}</h1>
+        <h4>{{ .Params.subline }}</h4>
+        <div
+          class="flex flex-col md:items-center gap-x-6 gap-y-4 pt-4 md:flex-row md:justify-between"
+        >
+          <div class="flex gap-x-3">
+            {{ partial "author" (dict "author" .Params.author "authors" .Site.Data.authors.authors "teaser" false) . }}
+          </div>
+          <div class="flex flex-col gap-x-3 px-1.5 md:px-0">
+            <span class="mono text--tertiary font-small">
+              {{ .Date.Format "2 Jan 2006" }} · {{ .ReadingTime }} min</span
+            >
+          </div>
+        </div>
+      </header>
+      {{ $image := .Resources.GetMatch "post-hero-image.png" }}
+      {{ with $image }}
+        {{ $img := .Resize "x5000 webp" }}
+        <div class="article__header-image">
+          <img
+            src="{{ $img.RelPermalink }}"
+            width="{{ $img.Width }}"
+            height="{{ $img.Height }}"
+          />
+        </div>
+      {{ end }}
+      <div class="article__content">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="pb-8 lg:pb-16">
+        <h2>{{ site.Data.article.next }}</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
+        {{- range first 3 (where (where site.RegularPages "Section" "blog") "Permalink" "!=" .Permalink) -}}
+          {{ partial "blog/article-overview" . }}
+        {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  {{ partial "teaser" (dict "inverted" true "class" "teaser--inverted") }}
+{{ end }}

@@ -1,0 +1,35 @@
+<div class="js-slide slide bg-[{{ .color }}]">
+  {{ partial "home/slide-meta" . }}
+  <div class="slide__content container {{ .contentClass }}">
+    <div style="color: {{ .fontColor }}" class="slide__text">
+      <h3
+        style="text-wrap: balance"
+        class="text-white leading-tight md:leading-tight lg:leading-tight"
+      >
+        {{ .description }}
+      </h3>
+    </div>
+  </div>
+  <div
+    style="justify-content: {{ .position }}"
+    class="slide__img slide__img--{{ .classes }}"
+  >
+    {{ $image := resources.Get .image }}
+    {{ $img := $image.Resize "x5000 webp" }}
+    <img
+      style="max-width: {{ .maxWidth }}px"
+      width="{{ $img.Width }}"
+      height="{{ $img.Height }}"
+      src="{{ $img.RelPermalink }}"
+      class="slide__img__item max-w-[{{ .maxWidth }}px] {{ .imageClass }}"
+      alt=""
+    />
+  </div>
+  {{ if eq .background "hello" }}
+    {{ partial "hello" . }}
+  {{ end }}
+  <div style="background: {{ .color }}" class="slide__bg"></div>
+  <div
+    class="js-slide-cover absolute z-50 top-0 left-0 w-full h-full bg-black opacity-0"
+  ></div>
+</div>

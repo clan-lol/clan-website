@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <div class="blog">
+    <div class="blog__stage-frame">
+      <div class="grain"></div>
+    </div>
+    <div class="blog__body">
+      <div class="container">
+        <div class="flex flex-col gap-8 md:gap-16 lg:gap-24">
+          {{ range $index, $page := .Pages }}
+            {{ if (eq $index 0) }}
+              {{ $context := (dict "page" $page "isFirst" true "authors" .Site.Data.authors.authors "teaser" true) }}
+              {{ partial "blog/article-teaser" $context }}
+            {{ else if (eq $index 1) }}
+              {{ $context := (dict "page" $page "isFirst" false "authors" .Site.Data.authors.authors "teaser" true) }}
+              {{ partial "blog/article-teaser" $context }}
+            {{ end }}
+          {{ end }}
+          <section>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
+              {{ range $index, $page := .Pages }}
+                {{ if (gt $index 1) }}
+                  {{ partial "blog/article-overview" $page }}
+                {{ end }}
+              {{ end }}
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ partial "teaser" (dict "inverted" true "backgroundImage" true "class" "teaser--inverted") }}
+{{ end }}

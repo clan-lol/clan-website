@@ -1,0 +1,14 @@
+<video width="100%" loop muted autoplay>
+  <source
+    src="{{ .Site.BaseURL }}/videos/{{ with .Get "key" }}{{ . }}{{ end }}.webm"
+    type="video/webm"
+  />
+  <source
+    src="{{ .Site.BaseURL }}/videos/{{ with .Get "key" }}{{ . }}{{ end }}.ove"
+    type="video/ove"
+  />
+  <source
+    src="{{ .Site.BaseURL }}/videos/{{ with .Get "key" }}{{ . }}{{ end }}.mkv"
+    type="video/mkv"
+  />
+</video>

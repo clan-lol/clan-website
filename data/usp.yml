@@ -1,0 +1,22 @@
+headline: What is Clan
+description: >
+  A peer-to-peer computer management<br/>framework that has
+list:
+  - title: Uniform<br/>interface
+    description: Manage your networks from<br/>a single source of truth
+    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+  - title: Automated<br/>secret management
+    description: Automatically generate<br/>and provision secrets
+    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+  - title: Automated<br/>service setup
+    description: Install services as if<br/>they were applications
+    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+  - title: Automated<br/>backups
+    description: Synchronize state and backup<br/>to other peers automatically
+    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+  - title: Peer-to-peer<br/>Mesh VPN
+    description: Securely connect machines over<br/>a private network
+    long: All machines in your Clan are interconnected through a self-configuring peer-to-peer mesh VPN. This additional layer of protection ensures that sensitive services, which might have too much attack surface to be hosted on the public internet, can still be made available on your Clan's network.
+  - title: Live<br/>Overwrites
+    description: Deploy configuration over existing Linux distributions via SSH
+    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.

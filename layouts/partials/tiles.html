@@ -1,0 +1,57 @@
+<section
+  class="js-tiles relative z-20 py-12 md:py-16 lg:py-24 md:pb-8 lg:pb-12"
+>
+  <div class="container container--full">
+    <div class="flex flex-col gap-12 md:gap-16 lg:gap-16">
+      {{ partial "headline-group" (dict "headline" .headline "description" .description "class" "") }}
+      <div class="overflow-hidden lg:overflow-visible">
+        <div
+          class="no-scrollbar snap-x snap-mandatory overflow-x-auto lg:overflow-visible flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 px-4 lg:px-0"
+        >
+          {{ range .list }}
+            <article
+              class="js-tile js-modal snap-center tile group col-span-1 hover:bg-clan-secondary-50 opacity-0"
+              data-long="{{ .long }}"
+            >
+              <div class="js-tile-inner tile__inner h-full">
+                <header>
+                  <h3
+                    class="tile__headline"
+                    style="font-weight: bold;"
+                    class="h4"
+                  >
+                    {{ .title | markdownify }}
+                  </h3>
+                </header>
+                <div class="flex-1">
+                  <div class="tile__description body text-clan-secondary-800">
+                    {{ .description | markdownify }}
+                  </div>
+                </div>
+
+                {{ with .long }}
+                  <footer class="tile__footer">
+                    {{ $teaserImage := resources.GetMatch "images/icon-plus.svg" }}
+                    <button
+                      class="flex items-center justify-center w-6 h-6 lg:w-8 lg:h-8 bg-clan-secondary-100 border border-clan-secondary-200 rounded-sm group-hover:bg-clan-secondary-200 group-hover:border-clan-secondary-300"
+                    >
+                      {{ with $teaserImage }}
+                        <img
+                          width="20"
+                          height="20"
+                          src="{{ $teaserImage.RelPermalink }}"
+                        />
+                      {{ end }}
+                    </button>
+                  </footer>
+                {{ else }}
+                  <div class="h-0.5"></div>
+                {{ end }}
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

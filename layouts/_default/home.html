@@ -1,0 +1,47 @@
+{{ define "main" }}
+  <section>
+    <div class="js-hero hero">
+      <div class="hero__stage">
+        {{ $teaserImage := resources.GetMatch "images/clan-key-visual.png" }}
+        {{ with $teaserImage }}
+          {{ $img := $teaserImage.Resize "x1000 webp" }}
+          <figure class="mx-auto">
+            <img
+              class="mix-blend-overlay opacity-20"
+              width="{{ $img.Width }}"
+              height="{{ $img.Height }}"
+              src="{{ $img.RelPermalink }}"
+            />
+          </figure>
+        {{ end }}
+        <div class="grain"></div>
+      </div>
+      <div class="hero__content relative z-30">
+        <div class="container">
+          <div class="flex flex-col gap-6">
+            <header
+              class="relative flex flex-col items-center justify-center py-8 md:py-16 2xl:pt-0 2xl:pb-16 gap-4"
+            >
+              <h1 class="text-teaser text-white text-center">
+                {{ site.Data.home.heroHeadline }}
+              </h1>
+              <p
+                class="hero__description text-center body text-balance text-clan-tertiary-200‚"
+              >
+                {{ site.Data.home.heroSubline | markdownify }}
+              </p>
+            </header>
+          </div>
+          {{ partial "terminal" }}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ partial "tiles" .Site.Data.usp }}
+  {{ partial "teaser" (dict "inverted" true "backgroundImage" false "class" "") }}
+  {{ partial "use-case" . }}
+  {{ partial "home/presentation" . }}
+  {{ partial "home/conclusion" . }}
+  {{ partial "statement" . }}
+  {{ partial "teaser" (dict "inverted" true "backgroundImage" false "class" "") }}
+{{ end }}

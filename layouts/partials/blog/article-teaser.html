@@ -1,0 +1,52 @@
+{{ $parentClass := "article-teaser flex flex-col md:flex-row" }}
+{{ $articleContent := "flex-1 flex flex-col gap-4 md:gap-8 order-2 md:order-1" }}
+{{ $articleImage := "flex flex-col gap-8 h-full bg-clan-secondary-900 order-1 md:order-2" }}
+
+{{ if .isFirst }}
+  {{ $parentClass = print $parentClass " bg-white rounded-2xl md:rounded-3xl overflow-hidden" }}
+  {{ $articleContent = print $articleContent " p-4 py-8 md:p-8" }}
+  {{ $articleImage = print $articleImage " flex-1" }}
+{{ else }}
+  {{ $articleImage = print $articleImage " rounded-2xl overflow-hidden md:w-2/5" }}
+  {{ $articleContent = print $articleContent " p-1 py-8 md:px-4" }}
+{{ end }}
+
+
+<article class="article-excerpt">
+  <a href="{{ .page.Permalink }}" class="{{ $parentClass }}">
+    <div class="{{ $articleContent }}">
+      <div class="flex gap-4">
+        {{ if .isFirst }}
+          {{ partial "pill" (dict "title" "Newest" "class" "pill--highlight") }}
+        {{ end }}
+        {{ partial "blog/tags" .page }}
+      </div>
+      <header class="article-excerpt__header flex flex-col gap-3 md:gap-6">
+        <h3 class="text--primary">{{ .page.Title }}</h3>
+        <span class="body text--secondary max-w-lg">
+          {{ .page.Params.subline }}
+        </span>
+        <div class="flex items-center gap-x-3 px-1.5 md:px-0.5">
+          {{ partial "author" (dict "author" .page.Params.author "authors" .authors "teaser" .teaser) }}
+          <span class="mono text--tertiary font-small"
+            >{{ .page.Date.Format "2 Jan 2006" }} ·
+            {{ .page.ReadingTime }}
+            min</span
+          >
+        </div>
+      </header>
+    </div>
+    <div style="height: inherit;" class="{{ $articleImage }}">
+      {{ $image := .page.Resources.GetMatch "post-hero-image.png" }}
+      {{ $img := $image.Resize "x5000 webp" }}
+      {{ with $img }}
+        <img
+          class="flex-1 h-full object-cover"
+          src="{{ .RelPermalink }}"
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+        />
+      {{ end }}
+    </div>
+  </a>
+</article>
