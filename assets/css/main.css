@@ -992,19 +992,14 @@ video {
      object-fit: cover;
 }
 
-.object-top {
-  -o-object-position: top;
-     object-position: top;
-}
-
 .object-center {
   -o-object-position: center;
      object-position: center;
 }
 
-.object-bottom {
-  -o-object-position: bottom;
-     object-position: bottom;
+.object-top {
+  -o-object-position: top;
+     object-position: top;
 }
 
 .p-1 {
@@ -1166,16 +1161,12 @@ video {
   opacity: 0.05;
 }
 
-.opacity-85 {
-  opacity: 0.85;
-}
-
-.opacity-60 {
-  opacity: 0.6;
-}
-
 .opacity-50 {
   opacity: 0.5;
+}
+
+.opacity-85 {
+  opacity: 0.85;
 }
 
 .mix-blend-screen {

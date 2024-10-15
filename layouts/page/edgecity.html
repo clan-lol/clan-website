@@ -7,7 +7,7 @@
           {{ $img := $teaserImage.Resize "x1000 webp" }}
           <figure class="mx-auto h-full">
             <img
-              class="opacity-50 object-cover object-center h-full"
+              class="opacity-50 object-cover object-center h-full w-full"
               width="{{ $img.Width }}"
               height="{{ $img.Height }}"
               src="{{ $img.RelPermalink }}"
