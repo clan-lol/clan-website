@@ -104,6 +104,13 @@
   display: flex;
   padding: theme(padding.4);
   overflow: scroll;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.modal__body::-webkit-scrollbar {
+  display: none;
 }
 
 .modal__body__wrapper {

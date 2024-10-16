@@ -9,7 +9,7 @@
   left: 0;
   margin-top: calc(-1 * theme(padding.24));
   width: 100%;
-  height: 100%;
+  height: 95%;
   background: theme(colors.clan-primary.900);
   overflow: hidden;
 

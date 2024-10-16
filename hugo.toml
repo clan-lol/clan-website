@@ -1,4 +1,4 @@
-baseURL = 'https://clan-website.everchanging.design/'
+baseURL = 'https://clan.lol/'
 languageCode = 'en-us'
 title = 'Clan'
 [markup.goldmark.renderer]

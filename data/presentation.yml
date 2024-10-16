@@ -40,4 +40,4 @@ points:
     color: "#95ABAE"
     alignment: left
     image: images/phone.png
-    background: none
+    background: lock

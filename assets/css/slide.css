@@ -12,7 +12,7 @@
   overflow: hidden;
 
   @media screen(md) {
-    width: theme(width.[10/12]);
+    width: 95%;
     border-radius: theme(borderRadius.[3xl]);
   }
 }

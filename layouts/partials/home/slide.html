@@ -15,7 +15,7 @@
     class="slide__img slide__img--{{ .classes }}"
   >
     {{ $image := resources.Get .image }}
-    {{ $img := $image.Resize "x5000 webp" }}
+    {{ $img := $image.Resize "x1000 webp" }}
     <img
       style="max-width: {{ .maxWidth }}px"
       width="{{ $img.Width }}"
@@ -27,6 +27,10 @@
   </div>
   {{ if eq .background "hello" }}
     {{ partial "hello" . }}
+  {{ end }}
+
+  {{ if eq .background "lock" }}
+    {{ partial "lock" . }}
   {{ end }}
   <div style="background: {{ .color }}" class="slide__bg"></div>
   <div

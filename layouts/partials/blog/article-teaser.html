@@ -38,7 +38,7 @@
     </div>
     <div style="height: inherit;" class="{{ $articleImage }}">
       {{ $image := .page.Resources.GetMatch "post-hero-image.png" }}
-      {{ $img := $image.Resize "x5000 webp" }}
+      {{ $img := $image.Resize "x1000 webp" }}
       {{ with $img }}
         <img
           class="flex-1 h-full object-cover"
