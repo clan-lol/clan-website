@@ -19,6 +19,9 @@
         "aarch64-darwin"
         "x86_64-darwin"
       ];
+      imports = [
+        ./nix/treefmt/flake-module.nix
+      ];
       perSystem =
         {
           pkgs,
@@ -27,7 +30,7 @@
           ...
         }:
         {
-          devShells.default = pkgs.mkShell {
+          devShells.default = pkgs.mkShellNoCC {
             buildInputs = [
               pkgs.hugo
             ];
