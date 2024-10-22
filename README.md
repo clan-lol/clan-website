@@ -1,11 +1,17 @@
 # Build website
 
 ```
-$ nix develop -c hugo
+$ nix build
 ```
 
 # Serve website
 
 ```
 $ nix develop -c hugo server
+```
+
+# Deploy website
+
+```
+$ nix run .#deploy
 ```
