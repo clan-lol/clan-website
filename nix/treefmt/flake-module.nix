@@ -12,6 +12,18 @@
 
         programs.deadnix.enable = true;
         # programs.deno.enable = true;
+        programs.prettier.enable = true;
+        programs.prettier.settings = {
+          plugins = [
+            "${pkgs.prettier-plugin-go-template}/lib/node_modules/prettier-plugin-go-template/lib/index.js"
+          ];
+          overrides = [
+            {
+              files = [ "*.html" ];
+              options.parser = "go-template";
+            }
+          ];
+        };
         programs.nixfmt.enable = true;
         programs.shellcheck.enable = true;
 
