@@ -15,11 +15,14 @@
             pkgs.rsync
           ]
         }"
+        set -euo pipefail
+        tmpdir=$(mktemp -d)
+        trap "rm -rf $tmpdir" EXIT
 
         if [ -n "$SSH_HOMEPAGE_KEY" ]; then
-          echo "$SSH_HOMEPAGE_KEY" > ./ssh_key
-          chmod 600 ./ssh_key
-          sshExtraArgs="-i ./ssh_key"
+          echo "$SSH_HOMEPAGE_KEY" > "$tmpdir/ssh_key"
+          chmod 600 "$tmpdir/ssh_key"
+          sshExtraArgs="-i $tmpdir/ssh_key"
         else
           sshExtraArgs=
         fi
@@ -31,10 +34,6 @@
           -e "ssh -o StrictHostKeyChecking=no $sshExtraArgs" \
           -a ./ \
           www@clan.lol:/var/www/clan.lol
-
-        if [ -e ./ssh_key ]; then
-          rm ./ssh_key
-        fi
       '';
     in
     {
