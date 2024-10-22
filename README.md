@@ -15,3 +15,5 @@ $ nix develop -c hugo server
 ```
 $ nix run .#deploy
 ```
+
+Website also auto-deploys everytime commits are added to master.
