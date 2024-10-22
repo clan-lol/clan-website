@@ -7,7 +7,7 @@
     {
 
       devShells.default = pkgs.mkShellNoCC {
-        buildInputs = [
+        nativeBuildInputs = [
           pkgs.importNpmLock.hooks.linkNodeModulesHook
           pkgs.hugo
         ];

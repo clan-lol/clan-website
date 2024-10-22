@@ -22,6 +22,8 @@
       imports = [
         ./nix/treefmt/flake-module.nix
         ./nix/devShells/flake-module.nix
+        ./nix/packages/flake-module.nix
+        ./nix/apps/flake-module.nix
       ];
       perSystem =
         {
