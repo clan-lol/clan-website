@@ -21,20 +21,15 @@
       ];
       imports = [
         ./nix/treefmt/flake-module.nix
+        ./nix/devShells/flake-module.nix
       ];
       perSystem =
         {
-          pkgs,
           lib,
           self',
           ...
         }:
         {
-          devShells.default = pkgs.mkShellNoCC {
-            buildInputs = [
-              pkgs.hugo
-            ];
-          };
           checks =
             let
               packages = lib.mapAttrs' (n: lib.nameValuePair "package-${n}") self'.packages;
