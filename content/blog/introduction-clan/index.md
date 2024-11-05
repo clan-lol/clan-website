@@ -3,7 +3,7 @@ title= "Introducing Clan: Full-Stack Computing Redefined"
 subline= "Introducing Clan, a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that’s private, secure, and user-friendly. „Clan reclaims computing and networking from the ground up.”"
 date = 2024-03-19T09:08:10+02:00
 draft = false
-author = "W"
+authors = [ "W", "Qubasa" ]
 tags = ['Dev Report']
 asciinema = true
 +++
