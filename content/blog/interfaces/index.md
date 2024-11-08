@@ -3,7 +3,7 @@ title= "Providing Type-safe interfaces between NixOS and other languages"
 subline= "One method for creating type-safe interfaces in a nix based software stack"
 date = 2024-09-11T09:08:10+02:00
 draft = false
-author = "Johannes Kirshbauer"
+authors = ["Johannes Kirshbauer" ]
 tags = ['Dev Report']
 +++
 

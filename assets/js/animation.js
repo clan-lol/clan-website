@@ -24,8 +24,8 @@ function GenerateTimeline(trigger, start, end, markers, ease) {
 export function TerminalAnim() {
   const tl = GenerateTimeline(
     ".js-hero",
-    "top top",
-    "+=60",
+    "top 200px", // Start the animation when the top of the trigger hits 100px from the top of the viewport
+    "+=60px",
     false,
     "power1.inOut",
   );

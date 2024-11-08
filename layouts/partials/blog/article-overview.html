@@ -15,7 +15,11 @@
     </header>
     <div>
       <div class="flex items-center gap-x-4">
-        {{ partial "author" (dict "author" .Params.author "authors" .Site.Data.authors.authors "teaser" true) }}
+        {{ range .Params.authors }}
+          {{ partial "author" (dict "author" . "authors" $.Site.Data.authors.authors "teaser" true) }}
+        {{ else }}
+          {{ partial "author" (dict "author" .Params.author "authors" $.Site.Data.authors.authors "teaser" true) }}
+        {{ end }}
         <span class="mono text--tertiary font-small"
           >{{ .Params.Date.Format "2 Jan 2006" }} ·
           {{ .ReadingTime }}

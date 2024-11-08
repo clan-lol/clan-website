@@ -27,7 +27,13 @@
           {{ .page.Params.subline }}
         </span>
         <div class="flex items-center gap-x-3 px-1.5 md:px-0.5">
-          {{ partial "author" (dict "author" .page.Params.author "authors" .authors "teaser" .teaser) }}
+            {{ if .page.Params.authors }} 
+              {{ range .page.Params.authors }}
+              {{ partial "author" (dict "author" . "authors" $.authors "teaser" $.teaser) }}
+              {{ end }}
+            {{ else if .page.Params.author }}
+              {{ partial "author" (dict "author" .page.Params.author "authors" $.authors "teaser" $.teaser) }}
+            {{ end }}
           <span class="mono text--tertiary font-small"
             >{{ .page.Date.Format "2 Jan 2006" }} ·
             {{ .page.ReadingTime }}
