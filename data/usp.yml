@@ -4,19 +4,19 @@ description: >
 list:
   - title: Uniform<br/>interface
     description: Manage your networks from<br/>a single source of truth
-    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
   - title: Automated<br/>secret management
     description: Automatically generate<br/>and provision secrets
-    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+    long: Passwords and other sensitive information are encrypted next to your configuration data, and automatically decrypted during deployment of services and their clients. This keeps your secrets safe while also simplifying their management.
   - title: Automated<br/>service setup
     description: Install services as if<br/>they were applications
-    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+    long: "Setting up a service can be quite complex: many server adjustments need to be made, from setting up a database to adjusting webserver configurations and generating the correct private keys. Clan aims to make setting up a service as easy as installing an application. Through the Modules system, everything down to secrets can be set up through a smooth automated process."
   - title: Automated<br/>backups
     description: Synchronize state and backup<br/>to other peers automatically
-    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+    long: Each clan service designates a state directory where all service state data is stored. This setup enables the automatic backup of every service to other peers, including Postgres databases. Using the Syncthing clan module, you can create perfect replicas of your laptop.
   - title: Peer-to-peer<br/>Mesh VPN
     description: Securely connect machines over<br/>a private network
     long: All machines in your Clan are interconnected through a self-configuring peer-to-peer mesh VPN. This additional layer of protection ensures that sensitive services, which might have too much attack surface to be hosted on the public internet, can still be made available on your Clan's network.
   - title: Live<br/>Overwrites
     description: Deploy configuration over existing Linux distributions via SSH
-    long: Clan allows you specify everything about the machines you control, using a single Git repository. Declare disk layout, service configuration, access control, backup strategies, and more in the Nix language or JSON. Scale your IT infrastructure on your own terms. No need to rely on a centralized provider.
+    long: With Clan, you can skip the cumbersome task of bootstrapping specific installation images. Clan allows you to overwrite any existing Linux distribution live over SSH, eliminating time-consuming setup processes. Deploy updates or new configurations swiftly and efficiently, maximizing uptime and minimizing hassle.
