@@ -3,6 +3,7 @@
 >
   <div class="container container--full">
     <div class="flex flex-col gap-12 md:gap-16 lg:gap-16">
+      {{ partial "teaser-content" }}
       {{ partial "headline-group" (dict "headline" .headline "description" .description "class" "") }}
       <div class="overflow-hidden lg:overflow-visible">
         <div
