@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 window.$ = $;
 
 gsap.registerPlugin(ScrollTrigger);
+const mm = gsap.matchMedia();
 
 function GenerateTimeline(trigger, start, end, markers, ease) {
   return gsap.timeline({
@@ -24,8 +25,8 @@ function GenerateTimeline(trigger, start, end, markers, ease) {
 export function TerminalAnim() {
   const tl = GenerateTimeline(
     ".js-hero",
-    "top 200px", // Start the animation when the top of the trigger hits 100px from the top of the viewport
-    "+=60px",
+    "top top",
+    "+=60",
     false,
     "power1.inOut",
   );
@@ -73,11 +74,20 @@ export function TilesAnim() {
   const targets = $(".js-tiles");
   const tl = GenerateTimeline(targets, "+=20% 75%", "10%", false, "power1.in");
 
-  tl.addLabel("start").to(
-    $(".js-tile"),
-    { opacity: 1, stagger: 0.48 },
-    "start",
-  );
+  mm.add("(min-width: 768px)", () => {
+    $(".js-tile").css({ opacity: 0 });
+
+    tl.addLabel("start").to(
+      $(".js-tile"),
+      { opacity: 1, stagger: 0.48 },
+      "start",
+    );
+
+    return () => {
+      alert("no match");
+      $(".js-tile").css({ opacity: 1 });
+    };
+  });
 }
 
 export function ModalContent(target) {
