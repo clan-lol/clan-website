@@ -92,7 +92,6 @@ export function TilesAnim() {
 
 export function ModalContent(target) {
   const modalContent = $("#js-modal-content");
-  // const target =
   modalContent.clone().appendTo("#js-modal-body .modal__body__wrapper");
 
   const modalContentCopy = $(".modal__body__inner")[0];
