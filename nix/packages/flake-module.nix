@@ -18,6 +18,8 @@
         ];
         buildPhase = ''
           runHook preBuild
+          # update generate css file
+          npx tailwindcss -i assets/css/main-input.css -o assets/css/main.css
           hugo
           runHook postBuild
         '';
