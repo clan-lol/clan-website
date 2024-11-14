@@ -84,8 +84,21 @@ export function TilesAnim() {
     );
 
     return () => {
-      alert("no match");
       $(".js-tile").css({ opacity: 1 });
+    };
+  });
+
+  mm.add("(max-width: 767px)", () => {
+    $(".js-tile").css({ opacity: 1 });
+
+    return () => {
+      $(".js-tile").css({ opacity: 0 });
+
+      tl.addLabel("start").to(
+        $(".js-tile"),
+        { opacity: 1, stagger: 0.48 },
+        "start",
+      );
     };
   });
 }
@@ -95,7 +108,6 @@ export function ModalContent(target) {
   modalContent.clone().appendTo("#js-modal-body .modal__body__wrapper");
 
   const modalContentCopy = $(".modal__body__inner")[0];
-  console.log(modalContentCopy);
   $(modalContentCopy).css({
     position: "absolute",
     width: "100%",
