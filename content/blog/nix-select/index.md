@@ -68,3 +68,7 @@ nix-repl> select "*.config.networking.hostName" nixosConfigurations
 ```
 
 The query language is intentionally designed to be compatible with the Nix grammar, so it might be possible to extend the Nix expression language to improve ease of use.
+
+---
+
+This project was developed during [Thaigersprint 2025](https://thaigersprint.org/).
