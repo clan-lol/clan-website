@@ -12,7 +12,7 @@
         name = "website";
         src = self;
         nativeBuildInputs = [
-          pkgs.npmHooks.npmConfigHook
+          pkgs.importNpmLock.npmConfigHook
           pkgs.nodejs
           pkgs.hugo
         ];
@@ -23,11 +23,8 @@
           hugo
           runHook postBuild
         '';
-        # TODO: we want the lock file instead of a checksum
-        npmDeps = pkgs.fetchNpmDeps {
-          src = self;
-          hash = "sha256-vlRQ6UWaDFM9rqE5UaJNBDPpUl12Meu9VGernledg+0=";
-          inherit (pkgs) nodejs;
+        npmDeps = pkgs.importNpmLock {
+          npmRoot = self;
         };
         installPhase = ''
           runHook preInstall
