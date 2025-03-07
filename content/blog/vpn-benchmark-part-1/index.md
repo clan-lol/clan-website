@@ -62,7 +62,7 @@ The current testing methodology is fairly basic, only using `iperf3` to benchmar
 One thing one has to look out for is the fact that cloud VMs could share a network card with a noisy neigbhour generating lots of traffic and thus skewing the results. But that case should be fairly obvious to spot when looking at the ground truth benchmarks that are not using any kind of VPN. 
 
 
-An interesting finding from our preliminary tests revealed that UDP throughput between VMs was significantly lower than TCP throughput in the baseline tests. However, when routing the same traffic through the ZeroTier VPN, we achieved surprisingly higher UDP sending rates. This counterintuitive result likely stems from Hetzner's UDP traffic throttling within their NAT infrastructure. One  approach to circumvent this limitation could be implementing tests using the QUIC protocol, which might be whitelisted due to being a webstandard.
+An interesting finding from our preliminary tests revealed that UDP throughput between VMs was significantly lower than TCP throughput in the baseline tests. This counterintuitive result likely stems from Hetzner's UDP traffic throttling within their NAT infrastructure. One  approach to circumvent this limitation could be implementing tests using the QUIC protocol, which might be whitelisted due to being a webstandard.
 
 For now that's how far the project is, please note that it's not yet ready to be used.
 
