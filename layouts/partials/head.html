@@ -15,13 +15,13 @@
 <meta name="apple-mobile-web-app-title" content="Clan" />
 <link rel="manifest" href="/site.webmanifest" />
 
-<meta property="og:title" content="Clan" />
+<meta property="og:title" content="{{ if .IsHome }}Clan{{ else }}{{ .Title }}{{ end }}" />
 <meta
   property="og:description"
   content="{{ if .IsHome }}Discover the simplest way to re-enter independent computing with our framework. Placing control directly at your fingertips.{{ else }}{{ .Params.subline }}{{ end }}"
 />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://clan.lol" />
+<meta property="og:url" content="{{ .Permalink }}" />
 
 {{ $image := resources.Get "images/blogpost-image-idea.png" }}
 {{ $img := $image.Process "crop 1200x630" }}

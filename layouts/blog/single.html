@@ -33,7 +33,8 @@
         </div>
       </header>
       {{ $image := .Resources.GetMatch "post-hero-image.png" }}
-        {{ $img := $image.Resize "x5000 webp" }}
+      {{ with $image }}
+        {{ $img := .Resize "x5000 webp" }}
         <div class="article__header-image">
           <img
             src="{{ $img.RelPermalink }}"
@@ -41,6 +42,7 @@
             height="{{ $img.Height }}"
           />
         </div>
+      {{ end }}
       <div class="article__content">
         {{ .Content }}
       </div>
