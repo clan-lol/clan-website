@@ -1,13 +1,11 @@
 +++
-title = "Vars"
-subline = "A framework for managing secrets and computed values"
+title = "Vars: A framework for managing secrets and computed values"
+subline = "We developed vars, a NixOS extension designed to automatically generate both secret and non-secret values."
 date = 2025-03-24T21:25:04+07:00
 draft = false
 author = "DavHau"
 tags = ['Dev Report']
 +++
-
-In this article, we introduce `vars`, a NixOS extension designed to automatically generate both secret and non-secret values.
 
 ## The problem
 Deploying NixOS machines is often not a one-click experience. Even when re-using existing NixOS configurations, there is usually some machine specific initialization overhead that needs to be dealt with manually. Machine IDs need to be generated, passwords set, and ssh key pairs generated, to name a few examples.  
