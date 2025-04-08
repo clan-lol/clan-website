@@ -71,7 +71,7 @@ It’s our way of rethinking networks and infrastructure and inviting everyone t
 
 This is the Darknet Builder by Clan.
 
-{{< video key="clan-fast-forward-update" >}}
+{{< video key="clan-fast-timelapse" >}}
 
 That’s how we make complexity understandable.
 That’s how we democratise DevOps.
