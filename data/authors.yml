@@ -1,4 +1,8 @@
 authors:
+  - name: "Timo Busse"
+    description: "Product Designer"
+    avatar: "/images/profiles/timobusse.jpg"
+    url: "https://everchanging.design"
   - name: "DavHau"
     description: "Core Developer"
     avatar: "/images/profiles/davhau.jpg"
