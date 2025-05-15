@@ -1281,9 +1281,6 @@ video {
 
       line-height: 116%;
     }
-    @media (min-width: 1536px) {
-      font-size: clamp(2.72rem, 2.5vw, 3.62rem);
-    }
   }
 }
 
@@ -1293,8 +1290,8 @@ video {
   gap: 3rem 0;
   padding: 3rem 0;
   margin-inline: auto;
-  @media (min-width: 1024px) {
-    max-width: 83.333333%;
+  @media (min-width: 768px) {
+    max-width: 1024px;
   }
   .article__header {
     display: flex;
@@ -2405,9 +2402,6 @@ h3,
 
     line-height: 110%;
   }
-  @media (min-width: 1536px) {
-    font-size: clamp(2.24rem, 3.5vw, 2.5rem);
-  }
 }
 
 h4,
@@ -2422,9 +2416,6 @@ h4,
     line-height: 144%;
 
     letter-spacing: -0.02rem;
-  }
-  @media (min-width: 1536px) {
-    font-size: clamp(1.875rem, 4vw, 2rem);
   }
 }
 
@@ -2451,16 +2442,6 @@ h1,
 
     letter-spacing: -0.1rem;
   }
-  @media (min-width: 1024px) {
-    font-size: 3.875rem;
-
-    line-height: 110%;
-
-    letter-spacing: -0.1rem;
-  }
-  @media (min-width: 1536px) {
-    font-size: clamp(3rem, 4.5vw, 5rem);
-  }
 }
 
 h2,
@@ -2476,9 +2457,6 @@ h2,
     font-size: 3rem;
 
     line-height: 116%;
-  }
-  @media (min-width: 1536px) {
-    font-size: clamp(3rem, 3.5vw, 4.4rem);
   }
 }
 
@@ -2500,9 +2478,6 @@ p,
   @media (min-width: 768px) {
     font-size: 1.375rem;
   }
-  @media (min-width: 1536px) {
-    font-size: clamp(1.56rem, 2.5vw, 1.75rem);
-  }
 }
 
 .body {
@@ -2513,9 +2488,6 @@ p,
   letter-spacing: 0;
   @media (min-width: 768px) {
     font-size: 1.125rem;
-  }
-  @media (min-width: 1536px) {
-    font-size: clamp(1.16rem, 4vw, 1.375rem);
   }
 }
 
@@ -2535,9 +2507,6 @@ p,
     font-size: 4rem;
 
     line-height: 110%;
-  }
-  @media (min-width: 1536px) {
-    font-size: clamp(4.5rem, 4vw, 5.5rem);
   }
 }
 

@@ -12,10 +12,6 @@
       font-size: 3rem;
       line-height: 116%;
     }
-
-    @media screen(2xl) {
-      font-size: clamp(2.72rem, 2.5vw, 3.62rem);
-    }
   }
 }
 
@@ -28,8 +24,8 @@
 
   margin-inline: auto;
 
-  @media screen(lg) {
-    max-width: theme(width.10/12);
+  @media screen(md) {
+    max-width: theme(screens.lg);
   }
 
   .article__header {
