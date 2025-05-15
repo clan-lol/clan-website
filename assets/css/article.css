@@ -152,6 +152,19 @@
       }
     }
 
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      figcaption p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-style: italic;
+        padding: theme(padding.3) theme(padding.3) 0 theme(padding.3);
+      }
+    }
+
     li {
       list-style-type: disc;
 
@@ -245,3 +258,4 @@
   opacity: 0.16;
   animation: noise 2s steps(2) infinite;
 }
+
