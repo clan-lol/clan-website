@@ -63,49 +63,12 @@ body {
     "ss03" on;
 }
 
-h3,
-.h3 {
-  font-family:
-    Archivo SemiCondensed,
-    sans-serif;
-  font-weight: 600;
-  font-size: 1.625rem;
-  line-height: 120%;
-  letter-spacing: -0.03rem;
-
-  @media screen(md) {
-    font-size: 2rem;
-    line-height: 110%;
-  }
-
-  @media screen(2xl) {
-    font-size: clamp(2.24rem, 3.5vw, 2.5rem);
-  }
-}
-
-h4,
-.h4 {
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 116%;
-  letter-spacing: -0.0225rem;
-
-  @media screen(md) {
-    font-size: 1.625rem;
-    line-height: 144%;
-    letter-spacing: -0.02rem;
-  }
-
-  @media screen(2xl) {
-    font-size: clamp(1.875rem, 4vw, 2rem);
-  }
-}
 
 h1,
 .h1 {
   font-family:
-    Archivo SemiCondensed,
-    sans-serif;
+          Archivo SemiCondensed,
+          sans-serif;
   font-weight: 600;
   font-size: 2rem;
   line-height: 116%;
@@ -122,37 +85,55 @@ h1,
     line-height: 110%;
     letter-spacing: -0.1rem;
   }
-
-  @media screen(lg) {
-    font-size: 3.875rem;
-    line-height: 110%;
-    letter-spacing: -0.1rem;
-  }
-
-  @media screen(2xl) {
-    font-size: clamp(3rem, 4.5vw, 5rem);
-  }
 }
 
 h2,
 .h2 {
   font-family:
-    Archivo SemiCondensed,
-    sans-serif;
+          Archivo SemiCondensed,
+          sans-serif;
   font-weight: 600;
   font-size: 1.75rem;
   line-height: 120%;
   letter-spacing: -0.03rem;
 
   @media screen(md) {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 116%;
   }
+}
 
-  @media screen(2xl) {
-    font-size: clamp(3rem, 3.5vw, 4.4rem);
+h3,
+.h3 {
+  font-family:
+    Archivo SemiCondensed,
+    sans-serif;
+  font-weight: 600;
+  font-size: 1.625rem;
+  line-height: 120%;
+  letter-spacing: -0.03rem;
+
+  @media screen(md) {
+    font-size: 1.75rem;
+    line-height: 120%;
   }
 }
+
+h4,
+.h4 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 116%;
+  letter-spacing: -0.0225rem;
+
+  @media screen(md) {
+    font-size: 1.625rem;
+    line-height: 144%;
+    letter-spacing: -0.02rem;
+  }
+}
+
+
 
 .article__content p {
   font-weight: 500;
@@ -173,10 +154,6 @@ p,
   @media screen(md) {
     font-size: 1.375rem;
   }
-
-  @media screen(2xl) {
-    font-size: clamp(1.56rem, 2.5vw, 1.75rem);
-  }
 }
 
 .body {
@@ -188,10 +165,6 @@ p,
 
   @media screen(md) {
     font-size: 1.125rem;
-  }
-
-  @media screen(2xl) {
-    font-size: clamp(1.16rem, 4vw, 1.375rem);
   }
 }
 
@@ -211,10 +184,6 @@ p,
   @media screen(lg) {
     font-size: 4rem;
     line-height: 110%;
-  }
-
-  @media screen(2xl) {
-    font-size: clamp(4.5rem, 4vw, 5.5rem);
   }
 }
 

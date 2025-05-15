@@ -12,10 +12,6 @@
       font-size: 3rem;
       line-height: 116%;
     }
-
-    @media screen(2xl) {
-      font-size: clamp(2.72rem, 2.5vw, 3.62rem);
-    }
   }
 }
 
@@ -26,8 +22,10 @@
 
   padding: theme(padding.12) 0;
 
-  @media screen(lg) {
-    max-width: theme(width.10/12);
+  margin-inline: auto;
+
+  @media screen(md) {
+    max-width: theme(screens.lg);
   }
 
   .article__header {
@@ -127,7 +125,7 @@
 
     p,
     li {
-      max-width: theme(width.10/12) !important;
+      text-align: justify;
       padding: 0 theme(padding.3);
       color: theme(colors.clan-primary.900);
     }
@@ -151,6 +149,19 @@
         @media screen(md) {
           padding: theme(padding.8) 0 theme(padding.8) theme(padding.8);
         }
+      }
+    }
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      figcaption p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-style: italic;
+        padding: theme(padding.3) theme(padding.3) 0 theme(padding.3);
       }
     }
 
@@ -247,3 +258,4 @@
   opacity: 0.16;
   animation: noise 2s steps(2) infinite;
 }
+

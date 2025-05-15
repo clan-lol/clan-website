@@ -171,7 +171,7 @@ $ nix eval --json -f ./export.nix | jq > nginx.json
 
 This provides a quick look at a potential GUI (screenshot is cropped).
 
-![Potential Nginx Gui](https://clan.lol/blog/json-schema-converter/nginx-gui.jpg)
+{{< figure src="https://clan.lol/blog/json-schema-converter/nginx-gui.jpg" caption="Potential Nginx Gui">}}
 
 ## Limitations
 
