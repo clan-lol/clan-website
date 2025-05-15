@@ -26,6 +26,8 @@
 
   padding: theme(padding.12) 0;
 
+  margin-inline: auto;
+
   @media screen(lg) {
     max-width: theme(width.10/12);
   }
@@ -127,7 +129,6 @@
 
     p,
     li {
-      max-width: theme(width.10/12) !important;
       padding: 0 theme(padding.3);
       color: theme(colors.clan-primary.900);
     }
