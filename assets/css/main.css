@@ -2400,42 +2400,11 @@ body {
     "ss03" on;
 }
 
-h3,
-.h3 {
-  font-family:
-    Archivo SemiCondensed,
-    sans-serif;
-  font-weight: 600;
-  font-size: 1.625rem;
-  line-height: 120%;
-  letter-spacing: -0.03rem;
-  @media (min-width: 768px) {
-    font-size: 2rem;
-
-    line-height: 110%;
-  }
-}
-
-h4,
-.h4 {
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 116%;
-  letter-spacing: -0.0225rem;
-  @media (min-width: 768px) {
-    font-size: 1.625rem;
-
-    line-height: 144%;
-
-    letter-spacing: -0.02rem;
-  }
-}
-
 h1,
 .h1 {
   font-family:
-    Archivo SemiCondensed,
-    sans-serif;
+          Archivo SemiCondensed,
+          sans-serif;
   font-weight: 600;
   font-size: 2rem;
   line-height: 116%;
@@ -2459,16 +2428,47 @@ h1,
 h2,
 .h2 {
   font-family:
-    Archivo SemiCondensed,
-    sans-serif;
+          Archivo SemiCondensed,
+          sans-serif;
   font-weight: 600;
   font-size: 1.75rem;
   line-height: 120%;
   letter-spacing: -0.03rem;
   @media (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 2rem;
 
     line-height: 116%;
+  }
+}
+
+h3,
+.h3 {
+  font-family:
+    Archivo SemiCondensed,
+    sans-serif;
+  font-weight: 600;
+  font-size: 1.625rem;
+  line-height: 120%;
+  letter-spacing: -0.03rem;
+  @media (min-width: 768px) {
+    font-size: 1.75rem;
+
+    line-height: 120%;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 116%;
+  letter-spacing: -0.0225rem;
+  @media (min-width: 768px) {
+    font-size: 1.625rem;
+
+    line-height: 144%;
+
+    letter-spacing: -0.02rem;
   }
 }
 
