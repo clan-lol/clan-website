@@ -1292,6 +1292,7 @@ video {
   flex-direction: column;
   gap: 3rem 0;
   padding: 3rem 0;
+  margin-inline: auto;
   @media (min-width: 1024px) {
     max-width: 83.333333%;
   }
@@ -1375,7 +1376,6 @@ video {
     }
     p,
     li {
-      max-width: 83.333333% !important;
       padding: 0 0.75rem;
       color: #253a3b;
     }
