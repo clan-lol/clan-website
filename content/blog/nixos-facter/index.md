@@ -37,7 +37,7 @@ Still in its early stages, [NixOS Facter] is intended to do what I've described 
 
 A user can generate a JSON-based hardware report using a (eventually static) Go program: `nixos-facter -o facter.json`. From there, they can include this report in their NixOS config and make use of our [NixOS modules](https://github.com/numtide/nixos-facter-modules) as follows:
 
-=== "**flake.nix**"
+#### flake.nix
 
     ```nix
     {
@@ -61,7 +61,7 @@ A user can generate a JSON-based hardware report using a (eventually static) Go 
     }
     ```
 
-=== "**without flakes**"
+#### without flakes
 
     ```nix
     # configuration.nix

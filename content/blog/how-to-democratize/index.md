@@ -17,20 +17,19 @@ That is the challenge we face at Clan. How do we design infrastructure and netwo
 
 _To develop a further sense of legacy interfaces and their calmness visit [toastytech.com](http://toastytech.com/guis/index.html)_
 
-![Machintosh in 1984 and a screenshot of the Note Pad application](clan-design-history-computing.png "Machintosh in 1984 and a screenshot of the Note Pad application")
-_Machintosh in 1984 and a screenshot of the Note Pad application_
+{{< figure src="clan-design-history-computing.png" caption="Macintosh in 1984 and a screenshot of the Note Pad application">}}
 
 A strong metaphor unlocks a mental model, which is the blueprint of every truly intuitive user experience. Because here is the truth: Without it, even the best tools feel like black boxes.
 
 So where do we find ours? To design the how, we need to understand the why. Why are we building Clan? And why do we want to democratize networking through an application?
 
-![The digital world has drifted apart](clan-design-neverending-ad.png "The digital world has drifted apart")
+{{< figure src="clan-design-neverending-ad.png" caption="The digital world has drifted apart">}}
 
 Because the digital world has drifted off course. Our devices have become closed boxes. Platforms addict and manipulate. Social media fractures societies and AI is blurring the line between real and fake by the day.
 
 The original promise of computing was a different one. When the machines entered our homes, they invited tinkering. You had to understand how they worked. You had to code. The barrier to entry wasn’t hidden, it was the whole point.
 
-![The age of the internet](clan-design-tinkering.png "The age of the internet")
+{{< figure src="clan-design-tinkering.png" caption="The age of the internet">}}
 
 Then came the internet: A wave of openness where content flowed freely. Industries were disrupted and subcultures found one another. There was magic in that beginning.
 
@@ -40,32 +39,29 @@ So what do we do? We take back the computer! We stop being just users, and start
 
 A quiet revolution. From the inside.
 
-![A quite revolution](clan-design-history.png "A quite revolution")
+{{< figure src="clan-design-history.png" caption="A quiet revolution">}}
 
 We reclaim the machine. We understand it. We use its building blocks to shape spaces of our own, digital enclaves outside the reach of the algorithmic hive mind.
 
 That’s why we’re building Clan: to make room for a better digital society.
 
-![A better digital society](clan-design-future.png "A better digital society")
+{{< figure src="clan-design-future.png" caption="A better digital society">}}
 
 And here’s the metaphor at the heart of our mission: Computers are like houses. You build them. Connect them. Neighborhoods form. Villages grow. Cities emerge. Societies take shape.
 
-![Sim City](clan-design-house.png "Sim City")
+{{< figure src="clan-design-house.png">}}
 
-![Sim City](clan-design-sim-city.png "Sim City")
+{{< figure src="clan-design-sim-city.png">}}
 
 Inspired by games like [SimCity](https://www.youtube.com/watch?v=jk7BkwksgX8&ab_channel=SergiuHellDragoonHQ), we use the metaphor of a digital city to represent networks and infrastructure. But this isn’t a simulation! It’s real, deployed architecture! It’s not just about designing, it’s about actually building, managing, and maintaining technical systems.
 
 At its core, our visual tool is a network simulation game with real technical infrastructure behind it. This is how we make complex systems understandable: playfully, visually, tangibly.
 
-![Clan’s Darknet Builder with already created machines](onboarding-step-not-yet-flashed.png "Clan’s Darknet Builder with already  created machines")
-_Clan’s Darknet Builder with already created machines_
+{{< figure src="onboarding-step-not-yet-flashed.png" caption="Clan’s Darknet Builder with already created machines">}}
 
-![A more advanced build of a network and its respective machines](onboarding-step.png "A more advanced build of a network and its respective machines")
-_A more advanced build of a network and its respective machines_
+{{< figure src="onboarding-step.png" caption="A more advanced build of a network and its respective machines">}}
 
-![Some details of Clan’s Darknet Builder UI](sidepanel-a01.png "Some details of Clan’s Darknet Builder UI")
-_Some details of Clan’s Darknet Builder UI_
+{{< figure src="sidepanel-a01.png" caption="Some details of Clan’s Darknet Builder UI">}}
 
 It’s our way of rethinking networks and infrastructure and inviting everyone to become the architect of their own digital world!
 
