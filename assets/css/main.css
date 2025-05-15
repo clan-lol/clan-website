@@ -1373,6 +1373,7 @@ video {
     }
     p,
     li {
+      text-align: justify;
       padding: 0 0.75rem;
       color: #253a3b;
     }
