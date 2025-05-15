@@ -54,7 +54,7 @@ Clan's Inventory system is the secret sauce that makes this all possible. It pro
 
 To then visualize the data a user can execute `vpb bench` this will build a static website with Nix and serve it over http once compiled.
 
-![image](./web_plots.png)
+{{< figure src="./web_plots.png">}}
 
 The current testing methodology is fairly basic, only using `iperf3` to benchmark throughput and packetloss. However in the upcoming weeks we plan on extending this, to test things like packet delay, packet reordering, node failures and of course more VPNs.
 

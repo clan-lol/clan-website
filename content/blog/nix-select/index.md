@@ -14,12 +14,12 @@ For this reason, we hacked together an unmatched selection experience. It is wri
 
 To use `nix-select` with the `clan` CLI, just run `clan select`.
 
-### Prominent features include:
+## Prominent features include:
 - Globs: `*`
 - `{a,b}` (set-based selection)
 - `.0` (index-based access)
 
-### Example using the Clan CLI:
+## Example using the Clan CLI:
 
 ```sh
 clan select 'nixosConfigurations.*.config.clan.core.vars.generators.*.files.*.{path,secret}'
