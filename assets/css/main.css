@@ -1433,6 +1433,16 @@ video {
     .code pre code > span {
       padding: 0.125rem 0.75rem;
     }
+    p > code, li > code {
+      font-size: 0.9em;
+      padding: 1px 0.25rem;
+      /*background: theme(colors.clan-secondary.500);*/
+      /*border-radius: theme(borderRadius.sm);*/
+      border-radius: 2px;
+      /*color: theme(colors.clan-secondary.50);*/
+      position: relative;
+      top: -1px;
+    }
   }
 }
 

@@ -1,6 +1,8 @@
 baseURL = 'https://clan.lol/'
 languageCode = 'en-us'
 title = 'Clan'
+enableEmoji = true
+
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files
 
@@ -10,3 +12,7 @@ title = 'Clan'
     name = "Blog"
     url = "/blog/"
     weight = 2
+
+
+[permalinks]
+posts = "/blog/:slug"

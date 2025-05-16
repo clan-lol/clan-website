@@ -199,6 +199,17 @@
     .code pre code > span {
       padding: theme(padding[0.5]) theme(padding.3);
     }
+
+    p > code, li > code {
+      font-size: 0.9em;
+      padding: theme(padding.px) theme(padding.1);
+      /*background: theme(colors.clan-secondary.500);*/
+      /*border-radius: theme(borderRadius.sm);*/
+      border-radius: 2px;
+      /*color: theme(colors.clan-secondary.50);*/
+      position: relative;
+      top: -1px;
+    }
   }
 }
 
