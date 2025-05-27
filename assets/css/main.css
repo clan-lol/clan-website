@@ -1433,6 +1433,17 @@ video {
     .code pre code > span {
       padding: 0.125rem 0.75rem;
     }
+    p > code, li > code {
+      font-size: 0.9em;
+      padding: 2px;
+      color: #333638;
+      background: #d8dbe2;
+      /* move these colors into theme config */
+      border-radius: 4px;
+      position: relative;
+      top: -1px;
+      letter-spacing: -0.05rem !important;
+    }
   }
 }
 
