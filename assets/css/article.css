@@ -199,6 +199,17 @@
     .code pre code > span {
       padding: theme(padding[0.5]) theme(padding.3);
     }
+
+    p > code, li > code {
+      font-size: 0.9em;
+      padding: 2px;
+      color: #333638;
+      background: #d8dbe2;  /* move these colors into theme config */
+      border-radius: 4px;
+      position: relative;
+      top: -1px;
+      letter-spacing: -0.05rem !important;
+    }
   }
 }
 
