@@ -1,7 +1,7 @@
 +++
 title= "Introducing macOS support"
 subline= "Clan can now deploy nix-darwin configurations"
-date = 2024-07-19T09:08:10+02:00
+date = 2025-06-11T09:08:10+02:00
 draft = false
 author = "Jörg Thalheim"
 tags = ['Dev Report']
