@@ -1,4 +1,12 @@
 authors:
+  - name: "Kenji Berthold"
+    description: "Core Developer"
+    avatar: "/images/profiles/kenji.png"
+    url: "https://kenji.page"
+  - name: "Timo Busse"
+    description: "Product Designer"
+    avatar: "/images/profiles/timobusse.jpg"
+    url: "https://everchanging.design"
   - name: "Timo Busse"
     description: "Product Designer"
     avatar: "/images/profiles/timobusse.jpg"
