@@ -32,16 +32,26 @@
           </div>
         </div>
       </header>
-      {{ $image := .Resources.GetMatch "post-hero-image.png" }}
+      {{ $image := .Resources.GetMatch "post-hero-image.*" }}
       {{ with $image }}
-        {{ $img := .Resize "x5000 webp" }}
-        <div class="article__header-image">
-          <img
-            src="{{ $img.RelPermalink }}"
-            width="{{ $img.Width }}"
-            height="{{ $img.Height }}"
-          />
-        </div>
+        {{ if eq .MediaType.SubType "svg" }}
+          <div class="article__header-image">
+            <img
+              src="{{ .RelPermalink }}"
+              width="1438"
+              height="860"
+            />
+          </div>
+        {{ else }}
+          {{ $img := .Resize "x5000 webp" }}
+          <div class="article__header-image">
+            <img
+              src="{{ $img.RelPermalink }}"
+              width="{{ $img.Width }}"
+              height="{{ $img.Height }}"
+            />
+          </div>
+        {{ end }}
       {{ end }}
       <div class="article__content">
         {{ .Content }}
