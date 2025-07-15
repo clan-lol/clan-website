@@ -2,7 +2,7 @@
   description = "Website of the clan project";
 
   inputs = {
-    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixpkgs-unstable&shallow=1";
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-unstable-small&shallow=1";
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
 
