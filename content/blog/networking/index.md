@@ -1,6 +1,6 @@
 +++
 title= "Networking"
-subline= "a new way to wire up you computers with clan"
+subline= "a new way to wire up your computers with clan"
 date= 2025-08-28T00:15:00+02:00
 author= "Lassulus"
 tags = ['Info', 'networking']
