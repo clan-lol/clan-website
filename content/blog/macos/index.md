@@ -25,7 +25,7 @@ Clan automatically imports a core set of modules into all machines to provide fe
 
 The NixOS module system has been made into a library and is now used in nix-darwin, Home Manager and other Nix-based projects. To keep a module from being loaded by the wrong module system, authors should set the `_class` attribute to `nixos` or `darwin`.
 
-We could extend the core Clan modules to support macOS is to duplicate all the code for nix-darwin, however this would lead to a lot of extra maintainence burden. So instead we decided to make modules that support both NixOS and nix-darwin.
+We could extend the core Clan modules to support macOS by duplicating all the code for nix-darwin, however this would lead to a lot of extra maintainence burden. So instead we decided to make modules that support both NixOS and nix-darwin.
 
 Previously, detecting which module system you were in required hacks like `options ? virtualisation` which works due to the `virtualisation` option tree existing only in NixOS and not nix-darwin:
 
