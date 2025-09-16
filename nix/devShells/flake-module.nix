@@ -14,9 +14,9 @@
       process-compose.dev = {
         settings.processes = {
           css = {
-            # we have to wrap the command with unbuffer as it expects a tty otherwise it stops immediately
-            # see https://github.com/F1bonacc1/process-compose/issues/64
-            command = "unbuffer tailwindcss -i assets/css/main-input.css -o assets/css/main.css --watch";
+            command = "tailwindcss -i assets/css/main-input.css -o assets/css/main.css --watch";
+            # tailwindcss --watch expects a tty otherwise it stops immediately
+            is_tty = true;
             # wait for first build
             ready_log_line = "Done in";
           };
@@ -34,7 +34,6 @@
           importNpmLock.hooks.linkNodeModulesHook
           hugo
           nodePackages.npm
-          expect
         ];
         npmDeps = pkgs.importNpmLock.buildNodeModules {
           npmRoot = ../..;
