@@ -1,4 +1,10 @@
-<video width="100%" loop muted autoplay>
+<video width="100%"
+  {{- if .Get "loop" }} loop{{ end -}}
+  {{- if .Get "muted" }} muted{{ end -}}
+  {{- if .Get "autoplay" }} autoplay{{ end -}}
+  {{- if .Get "controls" }} controls{{ end -}}
+  {{- with .Get "poster" }} poster="{{ $.Site.BaseURL }}/videos/{{ . }}"{{ end -}}
+>
   <source
     src="{{ .Site.BaseURL }}/videos/{{ with .Get "key" }}{{ . }}{{ end }}.webm"
     type="video/webm"
