@@ -31,6 +31,10 @@
 />
 <meta property="og:locale" content="en_US" />
 
+{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+{{ end -}}
+
 {{ if .Params.asciinema }}
   <link
     rel="stylesheet"

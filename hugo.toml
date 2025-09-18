@@ -2,6 +2,21 @@ baseURL = 'https://clan.lol/'
 languageCode = 'en-us'
 title = 'Clan'
 enableEmoji = true
+rssLimit = 50
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+term = ["HTML", "RSS"]
+
+[outputFormats.RSS]
+mediatype = "application/rss+xml"
+baseName = "feed"
+
+[params]
+description = "Backbone of independent infrastructure"
+author = "Clan Team"
 
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files
