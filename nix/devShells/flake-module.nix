@@ -33,7 +33,7 @@
         nativeBuildInputs = with pkgs; [
           importNpmLock.hooks.linkNodeModulesHook
           hugo
-          nodePackages.npm
+          nodejs
         ];
         npmDeps = pkgs.importNpmLock.buildNodeModules {
           npmRoot = ../..;
