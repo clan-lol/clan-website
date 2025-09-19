@@ -9,30 +9,24 @@ tags = ['Dev Report']
 
 ## Why NixOS Modules Need Two JSON Schemas
 
-Taking off where of the two related previous blogposts left off:
+In our previous blog posts, we explored a techinque that extracts interfaces from NixOS modules and converts them into JSON schemas. This enables building GUIs and APIs that can shallowly validate NixOS configurations without running Nix itself.
+Our second post explored the broader challenge of maintaining type-safe interfaces across polyglot architectures - specifically how to share consistent data models between Nix, Python, and TypeScript in the Clan project's tech stack.
 
 - [Introducing the NixOS to JSON Schema Converter](https://clan.lol/blog/json-schema-converter/)
 - [The Challenge of Polyglot Architectures](https://clan.lol/blog/interfaces/)
 
----
+## The New Discovery
 
-The NixOS module system is powerful but tricky to integrate with other tech stacks. JSON Schema offers a way to bridge that gap, with some surprising subtleties.
+While implementing these JSON schema-based types/interfaces in production, we discovered a subtle but important issue: we actually need two different JSON schemas for each NixOS module, not just one.
 
-When combining different tech stacks - for example Python and Nix - changes in some option in Nix may break assumptions in Python code.
-For use cases like this, JSON Schema is useful to allow for type validation at build-time or runtime data validation.
+When using JSON Schema for type validation at build-time and runtime, the approach proved surprisingly stable for building our tech stack.
+However, we noticed subtle usage differences that create unnecessary complexity.
 
-This is exactly what we do in clan to build a stable tech stack. I want breakages to occur immediately, such that they get caught by our typical developer mistake defense mechanisms: Linter, Build, CI, and Unit-Tests.
+The issue stems from how the NixOS module system behaves as a transformation layer.
+While one might expect that input configuration equals output configuration (since the module system is a fixed point),
+there's a notable difference that causes unnecessary type guarding when consuming or producing data.
 
-When using JSON Schema, this worked out to be surprisingly stable. However, I noticed that there are subtle usage differences.
-It seems we need two JSON Schemas, especially for the module system options, due to the way the system behaves.
-
-The first schema is for the configuration that can be given to a module system.
-The second one is for accessing the data that is produced from the configuration.
-
-Since the module system is a fixed point, one would expect that the given configuration is the same as the produced configuration.
-But it turns out that there is a notable difference that causes unnecessary type guarding when consuming or producing data.
-0
-A very simple example:
+An example:
 
 ```nix
 {
@@ -43,7 +37,7 @@ A very simple example:
 }
 ```
 
-(Examples in [CUE lang](https://cuelang.org/docs/tour/types/structs/) )
+(Types in [CUE lang](https://cuelang.org/docs/tour/types/structs/) )
 
 | Schema | Purpose                       | Example   |
 | ------ | ----------------------------- | --------- |
@@ -80,7 +74,7 @@ This can be represented as:
 
 | Schema | Purpose                       | Example   |
 | ------ | ----------------------------- | --------- |
-| Write  | What user/program provides    | `foo?: A | B` |
+| Write  | What user/program provides    | `foo?: A \| B` |
 | Read   | What module system guarantees | `foo: B`  |
 
 In type-theory terms, this means the `read` schema is a subtype of the `write` schema. In practice, this gives us two big wins.
@@ -131,4 +125,6 @@ In practice, that would mean more ad-hoc checks and possibly more subtle breakag
 
 ## Outlook
 
-`types.deferredModule` breaks with the round-tripping property entirely. But in clan we use these in a couple of api-facing places. In the next post, I'll dive into this case and show how I built a solution to restore those properties and make deferred modules api-usable.
+`types.deferredModule` breaks with the round-tripping property entirely.
+
+But in clan we use these in a couple of api-facing places. In the next post, I'll dive into this case and show how I built a solution to restore those properties and make deferred modules api-usable.
