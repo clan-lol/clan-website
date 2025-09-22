@@ -29,8 +29,17 @@ few years.
 
 For those who couldn't make it to Rapperwsil, you can watch a recording of the talk below.
 
-{{< video key="nixcon-2025" controls="true" poster="nixcon-2025.jpg">}}
+<video controls="true" poster="/videos/nixcon-2025.jpg" width="100%">
+  <source src="https://cdn.media.ccc.de/events/nixcon/2025/h264-hd/import-56411-eng-The_Road_Towards_a_NixOS_UI_hd.mp4" type="video/mp4">
+</video>
+
+If you would like to try Clan for yourself, have a look at our [docs].
+To contribute, check out our [gitea].
+And if you need help or just want to chat, come say hi :wave: in our [matrix channel].
 
 [NixCon 2025]: https://2025.nixcon.org/
 [@kenji]: https://kenji.page/
 [@qubasa]: https://github.com/qubasa
+[docs]: https://docs.clan.lol/
+[gitea]: https://git.clan.lol/clan/clan-core
+[matrix channel]: https://matrix.to/#/#clan:clan.lol
