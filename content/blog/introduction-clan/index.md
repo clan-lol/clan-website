@@ -34,15 +34,15 @@ Clan embodies a new philosophy in system, application, and network design. It en
 
 **Social Scaling:** Choose between creating a private sanctuary for your closest contacts, a dynamic space for a self-contained community, or embracing the open web with public Clans anyone can join.
 
-{{< video key="show_join" >}}
+{{< video key="show_join" autoplay="true" muted="true" loop="true">}}
 
 **Seamless VM Integration:** Applications running in virtual machines can appear and behave as if they're part of your main operating system — a blend of power and simplicity.
 
-{{< video key="show_run" >}}
+{{< video key="show_run" autoplay="true" muted="true" loop="true">}}
 
 **Robust Backup Management:** Keep your data safe _forever_ - never worry about cloud services disappearing in 10 years.
 
-{{< asciinema key="backups" >}}
+{{< asciinema key="backups" autoplay="true" muted="true" loop="true">}}
 
 **Intuitive Secret Management:** Clan simplifies digital security by automating the creation and management of encryption keys and passwords for your services.
 
