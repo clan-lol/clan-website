@@ -5,9 +5,6 @@ date = 2025-09-22T10:08:10+02:00
 draft = false
 author = "Brian McGee"
 tags = ['Dev Report', 'NixCon 2025']
-
-[build]
-    list = 'never'
 +++
 
 We recently attended [NixCon 2025] in Switzerland 🇨🇭 where we provided an __early look__ at our shiny new user interface for interacting with your Clan :tada::tada:.
