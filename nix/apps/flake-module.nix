@@ -47,8 +47,8 @@
         set -euo pipefail
 
         if [ $# -eq 0 ]; then
-            echo "Usage: nix run .#upload-video -- <video-file> [video-file...]"
-            echo "Example: nix run .#upload-video -- my-video.mp4 my-video.webm"
+            echo "Usage: nix run .#upload-video -- <file> [file...]"
+            echo "Example: nix run .#upload-video -- my-video.mp4 my-video.webm my-poster.jpg"
             exit 1
         fi
 

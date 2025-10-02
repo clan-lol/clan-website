@@ -22,15 +22,15 @@ Website also auto-deploys everytime commits are added to master.
 
 # Upload videos
 
-Videos are hosted on https://static.clan.lol and should not be committed to the repository.
+Videos and related assets (posters, etc.) are hosted on https://static.clan.lol and should not be committed to the repository.
 
-To upload videos:
+To upload videos and poster images:
 
 ```
-$ nix run .#upload-video -- my-video.mp4 my-video.webm
+$ nix run .#upload-video -- my-video.mp4 my-video.webm my-poster.jpg
 ```
 
-Videos will be available at `https://static.clan.lol/videos/<filename>`.
+Files will be available at `https://static.clan.lol/videos/<filename>`.
 
 To reference videos in blog posts, use the `video` shortcode:
 
