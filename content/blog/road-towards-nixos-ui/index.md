@@ -26,9 +26,7 @@ few years.
 
 For those who couldn't make it to Rapperwsil, you can watch a recording of the talk below.
 
-<video controls="true" poster="/videos/nixcon-2025.jpg" width="100%">
-  <source src="https://cdn.media.ccc.de/events/nixcon/2025/h264-hd/import-56411-eng-The_Road_Towards_a_NixOS_UI_hd.mp4" type="video/mp4">
-</video>
+{{< video key="nixcon-2025" poster="nixcon-2025.jpg" controls="true" >}}
 
 If you would like to try Clan for yourself, have a look at our [docs].
 To contribute, check out our [gitea].
