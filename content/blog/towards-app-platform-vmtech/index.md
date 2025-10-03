@@ -40,7 +40,7 @@ Now, has this been used on the client side already? Yes, most prominently by Asa
 
 ## Desktop and GPU support
 
-{{< video key="munixvelooooren" muted="true" loop="true" >}}
+{{< video key="munixvelooooren" autoplay="true" muted="true" loop="true" >}}
 
 In the Beginning (of virtio-gpu), there was the Framebuffer. An emulated computer monitor, a single rectangle representing the entire graphical output of the VM. Then there was [VirGL](https://docs.mesa3d.org/drivers/virgl.html), a way to forward the OpenGL API across the VM boundary to make the host render on its GPU on behalf of the VM, so that 3D graphics could be displayed on the emulated monitor. It wasn't super fast, it wasn't compatible with the latest GL extensions, it wasn't very secure, but it was something. With the advent of Vulkan, [Venus](https://docs.mesa3d.org/drivers/venus.html) was started as the Vulkan version of the same thing.
 
