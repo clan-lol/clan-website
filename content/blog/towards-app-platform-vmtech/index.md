@@ -34,7 +34,7 @@ If your experience with virtualization on desktop has only been with booting ent
 
 Conventional VMs feel "heavy" —slow to launch, big RAM footprint, extra background CPU usage, fixed storage allocation, usually not very well integrated with the host desktop— only because their goal is to simulate a whole another computer within your existing computer. For app isolation, we don't need that, so the whole stack can be vastly simplified and optimized for high performance and low overhead. The microVM idea was first popularized by AWS's [Firecracker](https://firecracker-microvm.github.io/) on the server side, powering instantly-launching event/request handlers in Lambda. A microVM boots directly into the kernel (skipping firmware) and does not emulate any legacy PC hardware, which results in *very* fast boot times, on the order of a couple hundred milliseconds.
 
-Now, has this been used on the client side already? Yes, most prominently by Asahi Linux, motivated by a technical restriction that was preventing Apple machines from playing legacy Windows games. That's the [muvm](https://github.com/AsahiLinux/muvm) project, powered by [libkrun](https://github.com/containers/libkrun) – a Firecracker-like VMM provided as a dynamic library so that different frontends could be built. For our platform development, we have indeed adopted muvm (after submitting [some changes](https://github.com/AsahiLinux/muvm/pull/192) that make it more useful for us), combining it with namespace-based [Bubblewrap](https://github.com/containers/bubblewrap) to make a script that [runs NixOS system closures](https://git.clan.lol/valpackett/munix) in microVMs.
+Now, has this been used on the client side already? Yes, most prominently by Asahi Linux, motivated by a technical restriction that was preventing Apple machines from playing legacy Windows games. That's the [muvm](https://github.com/AsahiLinux/muvm) project, powered by [libkrun](https://github.com/containers/libkrun) – a Firecracker-like VMM provided as a dynamic library so that different frontends could be built. For our platform development, we have indeed adopted muvm (after submitting [some changes](https://github.com/AsahiLinux/muvm/pull/192) that make it more useful for us), combining it with namespace-based [Bubblewrap](https://github.com/containers/bubblewrap) to make a script that [runs NixOS system closures](https://git.clan.lol/clan/munix) in microVMs.
 
 …Wait, did someone mention playing games– like, highly GPU-demanding games? In a VM? Without a dedicated GPU?
 
@@ -66,7 +66,7 @@ And we're continuing with more work in this area.
 
 Application isolation is great, but completely isolated applications tend to have limited usefulness. That's why we're also integrating [desktop portals](https://flatpak.github.io/xdg-desktop-portal/) that Flatpak uses —at least the file-opening / document portal— into the microVM-based platform.
 
-The [sidebus](https://git.clan.lol/valpackett/sidebus) project is inspired by [Spectrum](https://spectrum-os.org/)'s setup for using the document portal with virtiofs to dynamically expose chosen files to the guest, using vsock as the D-Bus transport. It is based on the [busd](https://github.com/dbus2/busd) broker library, and uses the portal frontend on the host for perfect integration with arbitrary desktop environments.
+The [sidebus](https://git.clan.lol/clan/sidebus) project is inspired by [Spectrum](https://spectrum-os.org/)'s setup for using the document portal with virtiofs to dynamically expose chosen files to the guest, using vsock as the D-Bus transport. It is based on the [busd](https://github.com/dbus2/busd) broker library, and uses the portal frontend on the host for perfect integration with arbitrary desktop environments.
 
 With the switch to libkrun however, we are looking at the possibility of making the Camera and Screencast portals working, with full hardware acceleration – by switching to virtgpu cross-domain as the transport instead of vsock. Currently libkrun already has added some PipeWire support to its copy of rutabaga_gfx, however that's fixed to one system-wide socket. How these portals work is that for every request they pass a new restricted PipeWire remote socket over D-Bus. So we're looking to make rutabaga's cross-domain sockets more generic, to be able to just pass through that whole chain of file descriptor passing.
 
@@ -74,4 +74,10 @@ With the switch to libkrun however, we are looking at the possibility of making 
 
 ## Conclusion
 
-We're looking to finally make a peer-to-peer community software platform that's competitive with commercial ones in terms of security, usability and convenience. Stay tuned!
+We're looking to finally make a peer-to-peer community software platform that's competitive with commercial ones in terms of security, usability and convenience.
+If you want to try it out now, you can! Just follow the installation instructions on our [munix project](https://git.clan.lol/clan/munix). 
+Note that it's still actively being developed, so if you find any issues, please open up a bug report!
+
+
+
+
