@@ -88,4 +88,4 @@ This means you can now write modules that support multiple module systems withou
 
 Using this new feature, we have added vars and deployment support to nix-darwin machines managed by Clan.
 
-If you'd like to try it out, you can check out our [macOS guide](https://docs.clan.lol/guides/macos/).
+If you'd like to try it out, you can check out our [macOS guide](https://docs.clan.lol/main/guides/macos/).
