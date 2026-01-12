@@ -110,9 +110,41 @@ In 2025, [we replaced our initial secret management approach ("facts") with vars
 
 NixOS excels at configuring individual machines. Clan extends this paradigm to groups of machines by introducing an inventory and service layer abstraction. This makes it possible to define services, users, secrets, and relationships once and apply them consistently across many machines. It's a critical shift from "machine configuration" to "infrastructure configuration," and underpins everything from networking to future collaboration features.
 
+
+```nix
+inventory.instances = {
+    # One declaration enables VPN across all machines
+    zerotier = {
+      roles.controller.machines.server = { };
+      roles.peer.tags = [ "all" ]; # All machines join the network
+    };
+  };
+```
+
+You can read more of about the inventory [here](https://docs.clan.lol/main/guides/inventory/inventory/).
+
 ### **Service exports and composability**
 
 Clan services can now export values that other services can consume. This allows different parts of the system to wire themselves together automatically, for example, enabling VPN configuration to be reused by higher-level services without manual glue code. The result is a more composable system where services cooperate instead of being configured in isolation.
+
+```nix
+perInstance = { mkExports, machine, ... }: {
+    exports = mkExports {
+      peer.hosts = [
+        {
+          plain = clanLib.getPublicValue {
+            machine = machine.name;
+            generator = "mycelium";
+            file = "ip";
+            flake = directory;
+          };
+        }
+      ];
+    };
+  };
+```
+
+You can read more of how exports work [here](https://docs.clan.lol/main/guides/services/exports/).
 
 ### **macOS as a first-class Clan member**
 
