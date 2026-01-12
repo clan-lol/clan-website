@@ -122,7 +122,7 @@ inventory.instances = {
   };
 ```
 
-You can read more of about the inventory [here](https://docs.clan.lol/main/guides/inventory/inventory/).
+You can read more about the inventory [here](https://docs.clan.lol/main/guides/inventory/inventory/).
 
 ### **Service exports and composability**
 
@@ -145,7 +145,7 @@ perInstance = { mkExports, machine, ... }: {
   };
 ```
 
-You can read more of how exports work [here](https://docs.clan.lol/main/guides/services/exports/).
+You can read more about how exports work [here](https://docs.clan.lol/main/guides/services/exports/).
 
 ### **macOS as a first-class Clan member**
 
