@@ -42,6 +42,7 @@
             pkgs.coreutils
             pkgs.openssh
             pkgs.rsync
+            pkgs.gnugrep
           ]
         }"
         set -euo pipefail
