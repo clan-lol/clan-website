@@ -86,11 +86,11 @@ To make Clan accessible beyond experienced Nix users, we needed a more legible w
 
 The GUI does not replace Nix or the Clan CLI; it builds on top of them. Where the CLI is precise and powerful, the GUI makes the system visible and approachable, especially for collaborators who shouldn't need to touch configuration files to participate. 
 
-{{< video key="clan-gui-demo" autoplay="true" loop="true" mute="true" >}}
+{{< video key="clan-gui-demo" autoplay="true" loop="true" mute="true" controls="true" >}}
 
 At its core, the GUI reflects Clan's opinionated deployment framework. It focuses on the hardest parts of self-hosting: bootstrapping machines, managing secrets, wiring services across multiple systems, and understanding what is running where. A declarative secret management system allows services to opt into their own secrets before deployment, enabling automatic generation, secure storage, rotation, and testing, all exposed consistently through both CLI and GUI.
 
-{{< video key="monitoring-alert" autoplay="true" loop="true" mute="true" >}}
+{{< video key="monitoring-alert" autoplay="true" loop="true" mute="true" controls="true" >}}
 
 
 On top of this sits client services: a multi-machine service layer that makes it possible to define shared infrastructure once and apply it across groups of machines using tags. Because this layer is [JSON](https://en.wikipedia.org/wiki/JSON)-compatible, services can be added, removed, or reconfigured through the GUI while remaining fully compatible with Nix-based workflows.
