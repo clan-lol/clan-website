@@ -55,7 +55,7 @@ postRestoreCommand = ''
 
 ## Then the Backup
 
-Our CLI unifies the different backup providers in one [interface](https://docs.clan.lol/reference/cli/backups/).
+Our CLI unifies the different backup providers in one [interface](https://docs.clan.lol/main/guides/backups/backup-intro/).
 
 As of now, we support backups using [BorgBackup](https://www.borgbackup.org/) and
 a backup module called "localbackup" based on [rsnapshot](https://rsnapshot.org/), optimized for backup on locally attached storage media.
@@ -93,7 +93,7 @@ and [localbackup](https://git.clan.lol/clan/clan-core/src/branch/main/clanModule
 
 ## What It Looks Like to the End User
 
-After following the guide for configuring a [backup](https://docs.clan.lol/getting-started/backups/),
+After following the guide for configuring a [backup](https://docs.clan.lol/main/guides/backups/backup-intro/),
 users can use the CLI to create backups, list them, and restore them.
 
 Backups can be created through the CLI like this:
