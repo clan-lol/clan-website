@@ -1,315 +1,316 @@
 .article-excerpt__header {
-    & h2 {
-        font-family: Archivo SemiCondensed,
-        sans-serif;
-        font-weight: 600;
-        font-size: 1.75rem;
-        line-height: 120%;
-        letter-spacing: -0.03rem;
+  & h2 {
+    font-family:
+      Archivo SemiCondensed,
+      sans-serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 120%;
+    letter-spacing: -0.03rem;
 
-        @media screen(md) {
-            font-size: 3rem;
-            line-height: 116%;
-        }
+    @media screen(md) {
+      font-size: 3rem;
+      line-height: 116%;
     }
+  }
 }
 
 .article {
+  display: flex;
+  flex-direction: column;
+  gap: theme(padding.12) 0;
+
+  padding: theme(padding.12) 0;
+
+  margin-inline: auto;
+
+  @media screen(md) {
+    max-width: theme(screens.lg);
+  }
+
+  .article__header {
     display: flex;
     flex-direction: column;
-    gap: theme(padding.12) 0;
+    gap: theme(padding[4]) 0;
 
-    padding: theme(padding.12) 0;
+    padding: 0 theme(padding.3);
 
-    margin-inline: auto;
+    h3,
+    h4 {
+      color: theme(colors.clan-primary.900);
+      max-width: theme(maxWidth.4xl);
+      font-weight: 500;
+      line-height: 148% !important;
+    }
+
+    @media screen(lg) {
+      gap: theme(padding[12]) 0;
+    }
+
+    @media screen(2xl) {
+      gap: theme(padding[16]) 0;
+    }
+  }
+
+  .highlight pre,
+  pre {
+    padding: theme(padding.8) theme(padding.6);
+    background: theme(colors.clan-primary.950) !important;
+    border-radius: theme(borderRadius.xl);
+    color: theme(colors.clan-secondary.50);
+    overflow-x: scroll;
+
+    & code {
+      display: flex;
+      flex-direction: column;
+      gap: theme(padding.1) 0;
+    }
+  }
+
+  .ap-player pre {
+    padding: 0;
+    background: transparent !important;
+    border-radius: 0;
+    color: theme(colors.clan-secondary.50);
+    overflow-x: scroll;
+  }
+
+  .article__header-image {
+    position: relative;
+    overflow: hidden;
+
+    margin: 0;
+    padding-top: 56.25%;
+    width: 100%;
+    height: 100%;
+
+    border-radius: theme(borderRadius.xl);
+    background: theme(colors.white);
 
     @media screen(md) {
-        max-width: theme(screens.lg);
+      border-radius: theme(borderRadius.2xl);
     }
 
-    .article__header {
-        display: flex;
-        flex-direction: column;
-        gap: theme(padding[4]) 0;
+    @media screen(lg) {
+      border-radius: theme(borderRadius.3xl);
+    }
+  }
 
-        padding: 0 theme(padding.3);
+  .article__header-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+  }
 
-        h3,
-        h4 {
-            color: theme(colors.clan-primary.900);
-            max-width: theme(maxWidth.4xl);
-            font-weight: 500;
-            line-height: 148% !important;
-        }
+  .article__content {
+    display: flex;
+    flex-direction: column;
+    gap: theme(padding.6) 0;
 
-        @media screen(lg) {
-            gap: theme(padding[12]) 0;
-        }
-
-        @media screen(2xl) {
-            gap: theme(padding[16]) 0;
-        }
+    @media screen(2xl) {
+      gap: theme(padding.10) 0;
     }
 
-    .highlight pre,
-    pre {
-        padding: theme(padding.8) theme(padding.6);
-        background: theme(colors.clan-primary.950) !important;
-        border-radius: theme(borderRadius.xl);
-        color: theme(colors.clan-secondary.50);
-        overflow-x: scroll;
-
-        & code {
-            display: flex;
-            flex-direction: column;
-            gap: theme(padding.1) 0;
-        }
+    h2 {
+      padding: theme(padding.10) theme(padding.3) 0;
     }
 
-    .ap-player pre {
-        padding: 0;
-        background: transparent !important;
-        border-radius: 0;
-        color: theme(colors.clan-secondary.50);
-        overflow-x: scroll;
+    h3 {
+      padding: 0 theme(padding.3);
     }
 
-    .article__header-image {
-        position: relative;
-        overflow: hidden;
+    p,
+    li {
+      padding: 0 theme(padding.3);
+      color: theme(colors.clan-primary.900);
+    }
 
-        margin: 0;
-        padding-top: 56.25%;
-        width: 100%;
-        height: 100%;
+    ul,
+    ol {
+      display: flex;
+      flex-direction: column;
+      gap: theme(padding.4) 0;
+      padding: theme(padding.8) 0 theme(padding.8) theme(padding.4);
 
-        border-radius: theme(borderRadius.xl);
-        background: theme(colors.white);
+      @media screen(md) {
+        padding: theme(padding.8) 0 theme(padding.8) theme(padding.8);
+      }
+
+      & ul,
+      & ol {
+        padding-left: 0;
+        padding-right: 0;
 
         @media screen(md) {
-            border-radius: theme(borderRadius.2xl);
+          padding: theme(padding.8) 0 theme(padding.8) theme(padding.8);
         }
-
-        @media screen(lg) {
-            border-radius: theme(borderRadius.3xl);
-        }
+      }
     }
 
-    .article__header-image img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: translate(-50%, -50%);
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      figcaption p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-style: italic;
+        padding: theme(padding.3) theme(padding.3) 0 theme(padding.3);
+      }
     }
 
-    .article__content {
-        display: flex;
-        flex-direction: column;
-        gap: theme(padding.6) 0;
+    li {
+      list-style-type: disc;
 
-        @media screen(2xl) {
-            gap: theme(padding.10) 0;
-        }
-
-        h2 {
-            padding: theme(padding.10) theme(padding.3) 0;
-        }
-
-        h3 {
-            padding: 0 theme(padding.3);
-        }
-
-        p,
-        li {
-            text-align: justify;
-            padding: 0 theme(padding.3);
-            color: theme(colors.clan-primary.900);
-        }
-
-        ul,
-        ol {
-            display: flex;
-            flex-direction: column;
-            gap: theme(padding.4) 0;
-            padding: theme(padding.8) 0 theme(padding.8) theme(padding.4);
-
-            @media screen(md) {
-                padding: theme(padding.8) 0 theme(padding.8) theme(padding.8);
-            }
-
-            & ul,
-            & ol {
-                padding-left: 0;
-                padding-right: 0;
-
-                @media screen(md) {
-                    padding: theme(padding.8) 0 theme(padding.8) theme(padding.8);
-                }
-            }
-        }
-
-        figure {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            figcaption p {
-                font-size: 1.125rem;
-                line-height: 1.75rem;
-                font-style: italic;
-                padding: theme(padding.3) theme(padding.3) 0 theme(padding.3);
-            }
-        }
-
-        li {
-            list-style-type: disc;
-
-            & a {
-                color: theme(colors.clan-info.600);
-                font-weight: bold;
-                word-break: break-all;
-            }
-        }
-
-        ol li {
-            list-style-type: decimal;
-        }
-
-        .code {
-            overflow: hidden;
-            border-radius: theme(borderRadius.xl);
-        }
-
-        p + h3 {
-            padding-top: theme(padding.8);
-        }
-
-        .code pre {
-            background: theme(colors.clan-primary.900) !important;
-        }
-
-        .code pre code {
-            padding: theme(padding.6);
-        }
-
-        .code pre code > span {
-            padding: theme(padding[0.5]) theme(padding.3);
-        }
-
-        p > code, li > code {
-            font-size: 0.9em;
-            padding: 2px;
-            color: #333638;
-            background: #d8dbe2; /* move these colors into theme config */
-            border-radius: 4px;
-            position: relative;
-            top: -1px;
-            letter-spacing: -0.05rem !important;
-        }
-
-        table {
-            width: 100%;
-            margin: theme(padding.6) 0;
-            border-collapse: collapse;
-            table-layout: fixed;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-        }
-
-        thead {
-            background: theme(colors.clan-primary.50);
-            border-bottom: 2px solid theme(colors.clan-primary.200);
-        }
-
-        th {
-            padding: theme(padding.3) theme(padding.4);
-            text-align: left;
-            font-weight: 600;
-            color: theme(colors.clan-primary.900);
-        }
-
-        td {
-            padding: theme(padding.2) theme(padding.3);
-            color: theme(colors.clan-primary.900);
-            background: theme(colors.clan-primary.50);
-            border-bottom: 1px solid theme(colors.clan-primary.100);
-            word-break: break-word;
-        }
-
-        tbody tr:hover {
-            background: theme(colors.clan-primary.50);
-        }
-
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        @media screen(sm) {
-          th, td {
-            padding: theme(padding.2) theme(padding.3);
-          }
-        }
+      & a {
+        color: theme(colors.clan-info.600);
+        font-weight: bold;
+        word-break: break-all;
+      }
     }
+
+    ol li {
+      list-style-type: decimal;
+    }
+
+    .code {
+      overflow: hidden;
+      border-radius: theme(borderRadius.xl);
+    }
+
+    p + h3 {
+      padding-top: theme(padding.8);
+    }
+
+    .code pre {
+      background: theme(colors.clan-primary.900) !important;
+    }
+
+    .code pre code {
+      padding: theme(padding.6);
+    }
+
+    .code pre code > span {
+      padding: theme(padding[0.5]) theme(padding.3);
+    }
+
+    p > code,
+    li > code {
+      font-size: 0.9em;
+      padding: 2px;
+      color: #333638;
+      background: #d8dbe2; /* move these colors into theme config */
+      border-radius: 4px;
+      position: relative;
+      top: -1px;
+      letter-spacing: -0.05rem !important;
+    }
+
+    table {
+      width: 100%;
+      margin: theme(padding.6) 0;
+      border-collapse: collapse;
+      table-layout: fixed;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    thead {
+      background: theme(colors.clan-primary.50);
+      border-bottom: 2px solid theme(colors.clan-primary.200);
+    }
+
+    th {
+      padding: theme(padding.3) theme(padding.4);
+      text-align: left;
+      font-weight: 600;
+      color: theme(colors.clan-primary.900);
+    }
+
+    td {
+      padding: theme(padding.2) theme(padding.3);
+      color: theme(colors.clan-primary.900);
+      background: theme(colors.clan-primary.50);
+      border-bottom: 1px solid theme(colors.clan-primary.100);
+      word-break: break-word;
+    }
+
+    tbody tr:hover {
+      background: theme(colors.clan-primary.50);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    @media screen(sm) {
+      th,
+      td {
+        padding: theme(padding.2) theme(padding.3);
+      }
+    }
+  }
 }
 
 .article-teaser .pill {
-    background: theme(colors.clan-secondary.50);
+  background: theme(colors.clan-secondary.50);
 }
 
 .article-teaser .pill--highlight {
-    background: theme(colors.clan-success.400);
+  background: theme(colors.clan-success.400);
 }
 
 .article-overview {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 .article-overview .article-overview__content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    padding: 0 theme(padding.2);
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 0 theme(padding.2);
 
-    @media screen(md) {
-        padding: 0 theme(padding.2);
-    }
+  @media screen(md) {
+    padding: 0 theme(padding.2);
+  }
 }
 
 .article-overview__noise {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    width: 110%;
-    height: 115%;
-    background: theme(colors.white);
-    transform: translate(-50%, -50%) scale(0.98);
-    opacity: 0;
-    border-radius: theme(borderRadius.xl);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: 115%;
+  background: theme(colors.white);
+  transform: translate(-50%, -50%) scale(0.98);
+  opacity: 0;
+  border-radius: theme(borderRadius.xl);
 
-    transition: transform 0.32s ease-in-out;
-    overflow: hidden;
+  transition: transform 0.32s ease-in-out;
+  overflow: hidden;
 }
 
 .article-overview:hover .article-overview__noise {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .article-overview__noise:before {
-    content: "";
-    top: -10rem;
-    left: -10rem;
-    width: calc(100% + 20rem);
-    height: calc(100% + 20rem);
-    z-index: 2;
-    position: fixed;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
-    opacity: 0.16;
-    animation: noise 2s steps(2) infinite;
+  content: "";
+  top: -10rem;
+  left: -10rem;
+  width: calc(100% + 20rem);
+  height: calc(100% + 20rem);
+  z-index: 2;
+  position: fixed;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Image_gaussian_noise_example.png);
+  opacity: 0.16;
+  animation: noise 2s steps(2) infinite;
 }
-

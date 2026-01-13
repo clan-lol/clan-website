@@ -63,12 +63,11 @@ body {
     "ss03" on;
 }
 
-
 h1,
 .h1 {
   font-family:
-          Archivo SemiCondensed,
-          sans-serif;
+    Archivo SemiCondensed,
+    sans-serif;
   font-weight: 600;
   font-size: 2rem;
   line-height: 116%;
@@ -90,8 +89,8 @@ h1,
 h2,
 .h2 {
   font-family:
-          Archivo SemiCondensed,
-          sans-serif;
+    Archivo SemiCondensed,
+    sans-serif;
   font-weight: 600;
   font-size: 1.75rem;
   line-height: 120%;
@@ -133,8 +132,6 @@ h4,
   }
 }
 
-
-
 .article__content p {
   font-weight: 500;
   line-height: 148%;
@@ -148,7 +145,7 @@ p,
   font-family: "Archivo", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 142%;
+  line-height: 134%;
   letter-spacing: 0;
 
   @media screen(md) {
