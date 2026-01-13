@@ -3,7 +3,6 @@ title = 'Clan 2025 Wrap-Up: From Infrastructure to a New Computing Paradigm'
 subline = 'A look back at what we built in 2025 and where Clan is heading next'
 date = 2026-01-12T00:00:00+00:00
 draft = false
-_build.list = "never"
 authors = ["catsnacks"]
 tags = ['Dev Report']
 +++
