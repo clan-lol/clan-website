@@ -90,7 +90,7 @@ encrypting a secret, we _add that recipient to the list_.
 This helps ensure you __do not encrypt a secret which you cannot decrypt__. 
 
 With vanilla [AGE] keys this isn't a problem, since you can recover the recipient with a simple `age-keygen -y`. 
-But for [AGE] plugins, we ended up with a workaround in which a user needs to [prepend a comment with the recipient key](https://docs.clan.lol/getting-started/secrets/#using-age-plugins).
+But for [AGE] plugins, we ended up with a workaround in which a user needs to [prepend a comment with the recipient key](https://docs.clan.lol/main/guides/vars/sops/age-plugins/#using-plugin-generated-keys).
 
 For example, this is what your `~/.config/sops/age/keys.txt` might look like:
 
@@ -188,14 +188,14 @@ And in the meantime, please bear in mind there are still a few rough edges :pray
 [Data Mesher]: https://git.clan.lol/clan/data-mesher
 [NixOS]: https://nixos.org
 [VM tests]: https://wiki.nixos.org/wiki/NixOS_VM_tests
-[Clan module]: https://docs.clan.lol/reference/clanModules/data-mesher/
+[Clan module]: https://docs.clan.lol/main/services/official/data-mesher/
 [Pinpox]: https://github.com/pinpox
 [sops-nix]: https://github.com/Mic92/sops-nix
 [Yubikeys]: https://www.yubico.com/
 [Yubikey]: https://www.yubico.com/
 [age]: https://github.com/FiloSottile/age
 [sops]: https://github.com/getsops/sops
-[secrets management]: https://docs.clan.lol/getting-started/secrets/
+[secrets management]: https://docs.clan.lol/main/guides/secrets/
 [age-plugin-fido2-hmac]: https://github.com/olastor/age-plugin-fido2-hmac
 [age-plugin-yubikey]: https://github.com/str4d/age-plugin-yubikey
 [Vars]: /blog/vars 

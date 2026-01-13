@@ -6,7 +6,7 @@ author= "Lassulus"
 tags = ['Info', 'networking']
 +++
 
-(For a more dry and technical explanation, check out the networking docs at https://docs.clan.lol/guides/networking/)
+(For a more dry and technical explanation, check out the networking docs at https://docs.clan.lol/main/guides/networking/networking/)
 
 Every now and then people ask me, what is the best overlay network/VPN? And each time I give them a long and sad answer: that all of them have different tradeoffs and there's no one size that fits all. 
 
