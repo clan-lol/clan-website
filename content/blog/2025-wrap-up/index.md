@@ -80,7 +80,7 @@ We want to take this opportunity to express our gratitude to our friends at [Qub
 Strong, safe defaults are a necessary foundation, but for many people, they are still not enough. Especially for those unfamiliar with NixOS, even a well-chosen default configuration leaves too much implicit knowledge unstated. Understanding how machines relate to each other, how services are composed, how secrets are managed, or how changes propagate across a network still requires expertise most users don't have. 
 
 
-To make Clan accessible beyond experienced Nix users, we needed a more legible way to understand and operate a Clan of machines. This is why we started building the Clan GUI, [which we introduced at NixCon](https://static.clan.lol/videos/nixcon-2025.mp4). 
+To make Clan accessible beyond experienced Nix users, we needed a more legible way to understand and operate a Clan of machines. This is why we started building the [Clan GUI](https://git.clan.lol/clan/clan-core/src/branch/main/pkgs/clan-app), [which we introduced at NixCon](https://static.clan.lol/videos/nixcon-2025.mp4). 
 
 
 The GUI does not replace Nix or the Clan CLI; it builds on top of them. Where the CLI is precise and powerful, the GUI makes the system visible and approachable, especially for collaborators who shouldn't need to touch configuration files to participate. 
