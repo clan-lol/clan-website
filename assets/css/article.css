@@ -109,20 +109,41 @@
   .article__content {
     display: flex;
     flex-direction: column;
-    gap: theme(padding.6) 0;
+    gap: theme(padding.4) 0;
+    margin: 0 auto;
 
     @media screen(2xl) {
-      gap: theme(padding.10) 0;
+      gap: theme(padding.6) 0;
     }
 
     h2 {
       padding: theme(padding.6) theme(padding.3) 0;
-      max-width: 67ch;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+
+      @media screen(md) {
+        max-width: 88%;
+      }
+
+      @media screen(lg) {
+        max-width: 72%;
+      }
     }
 
     h3 {
       padding: 0 theme(padding.3);
-      max-width: 67ch;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+
+      @media screen(md) {
+        max-width: 88%;
+      }
+
+      @media screen(lg) {
+        max-width: 72%;
+      }
     }
 
     video,
@@ -132,9 +153,19 @@
 
     p,
     li {
+      margin: 0 auto;
       padding: 0 theme(padding.3);
       color: theme(colors.clan-primary.900);
-      max-width: 67ch;
+      width: 100%;
+      max-width: 100%;
+
+      @media screen(md) {
+        max-width: 88%;
+      }
+
+      @media screen(lg) {
+        max-width: 72%;
+      }
     }
 
     ul,

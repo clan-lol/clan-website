@@ -229,7 +229,7 @@ p,
 
 .mono,
 code {
-  font-family: Fragment Mono !important;
+  font-family: Fragment Mono, ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
   font-weight: 400;
   letter-spacing: initial !important;
   font-feature-settings:
