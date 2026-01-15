@@ -196,7 +196,7 @@ This is an important step toward a healthier division of responsibilities: a sta
 
 ### Clan as mass-scale decentralized infrastructure
 
-Although we've so far focused on smaller scale networks, we have also been researching how Clan might add resilience and value to large-scale decentralized systems such as blockchains. Blockchains, which store more than $3 trillion worth of digital assets in the form of cryptocurrencies, are heavily dependent on centralized infrastructure such as cloud providers and hosted platforms. Now that we have a stable version of Clan, we can finally say to the crypto world: "Nix can fix this."
+Although we've so far focused on smaller scale networks, we have also been researching how Clan might add resilience and value to large-scale decentralized systems such as blockchains. Blockchains, which store more than $3 trillion worth of digital assets in the form of cryptocurrencies, are heavily dependent on centralized infrastructure such as cloud providers and hosted platforms. Now that we have a stable version of Clan, we can finally say to the crypto world: "Clan can fix this."
 
 We believe this area is worth exploring because it represents a strategic opportunity and proving ground for both Nix and Clan. It's a highly adversarial environment, so if Clan can endure there, it can endure anywhere. Moreover, most blockchain infrastructure is already open source and Linux-based, so migration costs would be low, but the potential benefits are high.
 
