@@ -221,3 +221,7 @@ The examples discussed above, including blockchain and peer-to-peer coordination
 We are deeply grateful to everyone who contributed code, feedback, ideas, and critical perspectives throughout the year, as well as to our partners and sponsors, especially our friends at [Golem](https://golem.network/), whose support has been instrumental in making this work possible.
 
 Clan is built in public, deliberately and collaboratively. If you're curious, we invite you to try [Clan](https://docs.clan.lol/main/), explore the [repository](https://git.clan.lol/clan/clan-core), join the conversation on [Matrix](https://matrix.to/#/#clan:clan.lol), give feedback, follow development, and share ideas about where Clan could help solve real problems. We believe sovereign computing is not a niche concern, but a prerequisite for a healthier digital future, and we're excited to keep building toward it together.
+
+**Credits**
+
+- "Voxel art in Spaces UI by [Mari Zand](https://madmaraca.art/), used with permission"
