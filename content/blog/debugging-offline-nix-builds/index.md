@@ -2,7 +2,7 @@
 title = "Debugging Offline Nix Builds"
 subline = "A journey through hermetic builds, mass rebuilds, and network injection hackery"
 date = 2026-01-29T12:00:00+00:00
-draft = true
+draft = false
 author = "Jörg Thalheim"
 tags = ['Dev Report', 'Nix', 'Testing']
 +++
