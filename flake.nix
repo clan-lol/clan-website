@@ -6,6 +6,13 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
 
+    # Hugo 0.153.0 replaced the CGO-based WebP encoder with a WASM build
+    # (Wazero + libwebp 1.6.0) that has a hard 384 MiB memory cap, causing
+    # OUT_OF_MEMORY on every WebPEncode call.  Pin to the last nixpkgs
+    # revision carrying Hugo 0.152.2 until upstream resolves this:
+    # https://github.com/gohugoio/hugo/issues/14282
+    nixpkgs-hugo.url = "github:NixOS/nixpkgs/c0b0e0fddf73fd517c3471e546c0df87a42d53f4";
+
     treefmt-nix.url = "github:numtide/treefmt-nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -31,9 +38,19 @@
         {
           lib,
           self',
+          system,
           ...
         }:
         {
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = [
+              (_final: _prev: {
+                hugo = inputs.nixpkgs-hugo.legacyPackages.${system}.hugo;
+              })
+            ];
+          };
+
           checks =
             let
               packages = lib.mapAttrs' (n: lib.nameValuePair "package-${n}") self'.packages;

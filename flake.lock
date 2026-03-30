@@ -37,6 +37,22 @@
         "url": "https://github.com/NixOS/nixpkgs"
       }
     },
+    "nixpkgs-hugo": {
+      "locked": {
+        "lastModified": 1766902085,
+        "narHash": "sha256-coBu0ONtFzlwwVBzmjacUQwj3G+lybcZ1oeNSQkgC0M=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c0b0e0fddf73fd517c3471e546c0df87a42d53f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c0b0e0fddf73fd517c3471e546c0df87a42d53f4",
+        "type": "github"
+      }
+    },
     "process-compose": {
       "locked": {
         "lastModified": 1767863885,
@@ -56,6 +72,7 @@
       "inputs": {
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-hugo": "nixpkgs-hugo",
         "process-compose": "process-compose",
         "treefmt-nix": "treefmt-nix"
       }
