@@ -96,7 +96,7 @@ We also encourage you, the user, to try it out and see what you can come up with
 [RAFT]: https://raft.github.io/
 [libp2p]: http://libp2p.io/
 [Syncthing]: https://syncthing.net/
-[IPFS]: https://ipfs.io/
+[IPFS]: https://ipfs.tech/
 [dm-dns]: https://git.clan.lol/clan/clan-core/src/branch/main/clanServices/dm-dns
 [Service Exports]: https://clan.lol/docs/25.11/guides/services/exports
 [Pinpox]: https://github.com/pinpox
