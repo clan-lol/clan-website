@@ -40,6 +40,7 @@
     </div>
   </section>
   {{ partial "tiles" .Site.Data.usp }}
+  {{ partial "supporters" . }}
   {{ partial "teaser" (dict "inverted" true "backgroundImage" false "class" "") }}
   {{ partial "use-case" . }}
   {{ partial "home/presentation" . }}
