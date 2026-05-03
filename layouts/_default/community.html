@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <div class="community">
+    <div class="community__stage-frame">
+      <div class="grain"></div>
+      <div class="container">
+        <header class="community-stage__header">
+          <h1 class="js-find-ligatures text-white community-stage__title">
+            {{ .Title }}
+          </h1>
+          <h4 class="community-stage__subline">{{ .Params.subline }}</h4>
+        </header>
+      </div>
+    </div>
+    <div class="community__body">
+      <div class="container">
+        <article class="article community__article">
+          <div class="article__content community__content">
+            {{ .Content }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+{{ end }}

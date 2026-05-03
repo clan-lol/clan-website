@@ -1,0 +1,45 @@
+.community {
+  position: relative;
+  z-index: 1;
+  padding: theme(padding.8) 0 theme(padding.16);
+
+  @media screen(sm) {
+    padding: theme(padding.16) 0 theme(padding.24);
+  }
+}
+
+.community__stage-frame {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin-top: calc(-1 * theme(padding.24));
+  width: 100%;
+  background: theme(colors.clan-primary.900);
+  overflow: hidden;
+
+  @media screen(sm) {
+    margin-top: calc(-1 * theme(padding.16));
+  }
+
+  @media screen(md) {
+    margin-top: calc(-1 * theme(padding.24));
+  }
+}
+
+.community__stage-frame .grain {
+  position: absolute;
+}
+
+.community__body {
+  position: relative;
+  z-index: 20;
+}
+
+.community-stage__header {
+  padding: 7em 0 3em;
+  color: #fff;
+}
+.community__body {
+  margin-top: 7em;
+}

@@ -2,6 +2,7 @@
 @import "./article";
 @import "./teaser";
 @import "./blog";
+@import "./community";
 @import "./terminal";
 @import "./homepage";
 @import "./pill";

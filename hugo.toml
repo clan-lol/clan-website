@@ -28,6 +28,12 @@ author = "Clan Team"
     url = "/blog/"
     weight = 2
 
+    [[menu.nav]]
+    identifier = "community"
+    name = "Community"
+    url = "/community/"
+    weight = 3
+
 
 [permalinks]
 posts = "/blog/:slug"
